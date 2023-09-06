@@ -7,22 +7,19 @@ Nb. De standaardstructuur en de spartaanse opmaak van de README.md zijn helemaal
 Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard open zetten. Fijn om dat steeds voor de relevante stuk(ken) te doen.
 
 
-
-bla bla bla
-
 ## Jij
 
 <details open>
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
-  Sanne 't Hooft (vervangen door jouw naam)
+  Lisa Kozar
 
   #### Je startniveau:
-  hier je startniveau (kies uit zwart, rood óf blauw)
+  Piste blauw
 
   #### Je focus:
-  hier je focus (kies uit responsive óf surface plane)
+  Ik wil focussen op de surface laag en de website op een hoger niveau brengen. Als dit lukt wil ik kijken of ik ook iets kan doen qua responiveness
  
 </details>
 
@@ -36,15 +33,15 @@ bla bla bla
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+  https://store.steampowered.com/
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  <img src="stea,.png" width="375px" alt="foto van de homepagina van steam.">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  <img src="baldursgate.png" width="375px" alt="foto van de detailpagina wanneer een gebruiker op een game klikt. In dit geval is dat de pagina van Baldur's gate 3">
  
 </details>
 
