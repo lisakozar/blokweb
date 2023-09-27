@@ -1,0 +1,191 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+    box-sizing:border-box;  
+  }
+  
+  
+  
+  
+  
+  
+  /*********************/
+  /* CUSTOM PROPERTIES */
+  /*********************/
+  :root {
+      /* startje */
+      --color-text:#111;
+      --color-background:#eee;
+  }
+  
+  
+  
+  
+  
+  /****************/
+  /* JOUW STYLING */
+  /****************/
+  @font-face {
+      font-family: 'Steamfont';
+      src: url('fonts\MotivaSans-Regular.ttf') format('truetype');
+      font-weight: normal;
+    }
+  header{ 
+      position: sticky;
+      top: 0em;
+       width: 100%;
+      height: 4em;
+      background-color: #181c24;
+      z-index: 100;
+      text-align: center;
+  }
+  header img{
+      /* https://stackoverflow.com/questions/38488069/how-can-i-move-display-inline-block-to-the-right */
+      max-width: 7.3em;
+      max-height: auto;
+      display: inline-block;
+      position: relative;
+      top: 0.8em;
+      
+  }
+  
+  h1{
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  .tweedenavigatie {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      font-family: 'Motiva';
+      font-weight: normal;
+      
+    }
+    
+    .tweedenavigatie li a{
+      display: block;
+      max-width: auto;
+      background-image: linear-gradient(to right, #406494, #346ca0, #244c88, #182474);
+      justify-content: center;
+      font-family: 'Motiva';
+      color: white;
+      text-decoration: none;
+      text-align: left;
+      padding: 0.6em;
+  }
+  
+  .search{
+    background-image: linear-gradient(to right, #406494, #182474);
+    text-align: center;}
+  
+  
+  body{
+  color: #fff;
+  background-color: #121a24; 
+  margin: auto;}
+
+  img {
+    max-width: 100%;
+  }
+
+  .mininavigation{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+  }
+  .mininavigation li{
+    display: block;
+  }
+
+  .mininavigation li a{
+    text-decoration: none;
+    color: white;
+    text-align: left;
+    font-size: 0.8em;
+
+  }
+h1{
+  display: flex;
+  order: 2; /*waarom werkt order niet D: */
+}
+  #rethumbnail{
+    display: flex;
+    width: 100%;
+    float: left;
+    order: 1;
+  }
+
+  p{
+    padding: 0;
+    margin: 0;
+    font-size: 0.8em;
+  }
+
+  p a{
+    text-decoration: none;
+    color: #5baad8;
+    text-transform: uppercase;
+  }
+
+  h2{
+    text-transform: uppercase;
+    color: #87949d;
+    font-size: 1em;
+
+  }
+
+  .tagbuttons{
+		list-style-type: none;
+		display: flex;
+		justify-content: flex-start;
+		flex-direction: row;
+		gap: 0.5em;
+    padding: 0;
+	}
+.tagbuttons button{
+	background-color: #1b2838;
+    font-size: 0.8em;
+	border: none;
+    border-radius: 0.2em;
+	height: 1.8em;
+	width: auto;
+	text-align: center;
+
+
+}
+
+.tagbuttons button a{
+    text-decoration: none;
+	color: #61b5e6;
+}
+
+button {
+  all:unset;
+  background-color: #1b2838;
+  width: 30em;
+}
+
+video{
+  width: 100%;
+}
+
+.tinyimages{
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  gap: 0.3em;
+	scroll-snap-type: x mandatory;
+	overflow-x: scroll; 
+	flex-direction: row;
+	justify-content: flex-start;
+
+}
+
+.tinyimages li img{
+  width: 100%;
+  height: auto;
+}

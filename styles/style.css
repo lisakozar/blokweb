@@ -15,8 +15,9 @@
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	--color-text:#fff;
+	--color-background: #181c24;
+	--color-background-blue: #5f849a;
 }
 
 
@@ -26,6 +27,446 @@
 /****************/
 /* JOUW STYLING */
 /****************/
+@font-face {
+	font-family: 'Steamfont';
+	src: url('../fonts/MotivaSans-Regular.ttf') format('truetype');
+	font-weight: normal;
+  }
 
+html {
+	font-family: 'Steamfont';
+}
+
+header{ 
+	position: sticky;
+	top: 0em;
+ 	width: 100%;
+	height: 4em;
+	background-color: var(--color-background);
+	z-index: 100;
+	text-align: center;
+	display: grid;
+	grid-template-columns: 1fr min-content 1fr;
+	align-items: center;
+}
+
+header nav{
+	position: fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	translate:-100% 0%;
+	transition:.5s;
+	background-color: var(--color-background);
+	padding: 0;
+	margin: 0;
+}
+
+header nav.open {
+	translate:0% 0%;
+	background-color: var(--color-background);
+	list-style-type: none;
+}	
+
+header nav ul {
+	list-style-type: none;
+	text-decoration: none;
+	text-align: left;
+	padding: 0;
+	width: 100%;
+	
+
+}
+
+header nav ul li{
+	padding: 0.5em;
+	width: auto;
+}
+
+header nav ul a{
+	color: whitesmoke;
+	text-decoration: none;
+	background-color: var(--color-background-blue);
+	padding: 0;
+	width: 3em;
+}
+
+.mainnavigation{
+	font-size: 1.5em;
+}
+
+header img{
+	/* https://stackoverflow.com/questions/38488069/how-can-i-move-display-inline-block-to-the-right */
+	max-width: 7.3em;
+	max-height: auto;
+	display: inline;
+	position: relative;
+}
+
+h1{
+	display: none;
+}
+
+#hamburger{
+	all: unset;
+	justify-self: start;
+	margin-left: 1em;
+
+	
+}
+
+header button img{
+	max-width: 2em;
+	height: auto;
+	display: inline;
+	position: relative;
+}
+
+.mainnavigation li a{
+	width: 100%;
+	height: auto;
+	padding: 0.3em;
+	display: flex;
+	left: 0;
+	right: 0;
+	margin: 0;
+
+
+}
+
+.mainnavigation button{
+	background: transparent;
+	float: right;
+	margin-bottom: 1em;
+}
+
+.tweedenavigatie {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	font-family: 'Steamfont';
+	font-weight: normal;
+	background-image: linear-gradient(to right, #406494, #346ca0, #244c88, #182474);
+	text-align: center;
+	
+  }
+  
+  .tweedenavigatie li a{
+	display: inline-block;
+	width: 100%;
+	font-family: 'Steamfont';
+	color: var(--color-text);
+	text-decoration: none;
+	text-align: center;
+	padding: 0.6em;
+}
+
+.tweedenavigatie li{
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: space-between;
+	
+	align-items: center;
+}
+
+
+@media screen and (max-width: 600px) {
+	.tweedenavigatie li {
+	  display: flex;
+	width: 100%;
+	background-image: linear-gradient(to right, #406494, #346ca0, #244c88, #182474);
+	justify-content: center;
+	font-family: 'Motiva';
+	color: var(--color-text);
+	text-decoration: none;
+	text-align: left;
+	padding: 0.6em;
+}
+}
+
+
+form input[type="search"] {
+	text-align: left;
+	width: 100%;
+	height: 2em;
+	background-color: (var(--color-background-blue));
+	border-color: black;
+	border-radius: 0.3em;
+	position: absolute;
+	font-size: 1em;
+
+}
+
+form button{
+	width: 2.5em;
+	height: 2.5em;
+	position: relative;
+	float: right;
+	border-color: black;
+	padding: 0;
+	margin: 0;
+}
+
+
+body{
+max-width: 60em;
+margin: 0 auto; 
+color: var(--color-text);
+background-color: #202c3c;
+/*margin: 0 10em 0 10em;*/
+}
+
+.steamthumbnail1{
+	display: block;
+	width: 100%;
+}
+
+.steamthumbnail2{
+	display: none;
+}
+
+@media screen and (max-width: 600px) {
+	.steamthumbnail1 {
+	  display: none;
+}
+.steamthumbnail2{
+	display: block;
+	width: 100%;
+}
+}
+
+
+h2{
+font-size: 0.9em;
+text-transform: uppercase;
+position: relative;
+}
+
+ul.gamecards {
+	padding: 0;
+	display: flex;
+	scroll-snap-type: x mandatory;
+	overflow-x: scroll; 
+	flex-direction: row;
+	justify-content: flex-start;
+	list-style: none;
+	gap: 1em;
+}
+
+ul.gamecards li a {
+	text-decoration: none;
+	color: var(--color-text);
+}
+
+ul.gamecards figure{
+	background-image: linear-gradient( #0c1721 70%, #1b3147);
+	width: 24em;
+	height: auto;
+	box-shadow: 0.09em 0.03em 0.1em black;
+	scroll-snap-type: x mandatory;
+}
+
+li img{
+	max-width: 100%;
+	max-height: auto;
+}
+
+.specialoffer .gamecards li figure{
+	background-image: linear-gradient( #217399, #1c658b);
+	width: 19em;
+	height: 24em;
+	box-shadow: 0.05em 0.05em 0.1em black;
+	scroll-snap-type: x mandatory;
+	justify-content: flex-start;
+	/*margin-left: 1em;*/
+}
+.specialoffer .gamecards li figure img{
+width: 19em;
+height: 18em;
+	
+	
+}
+
+h3{
+	color: var(--color-text);
+	text-decoration: none;
+	font-size: 1.2em;
+	padding: 0.5em;
+	margin-top: 0;
+	margin-bottom: 0;
+
+}
+
+h4{
+	color: (var(--color-text));
+	text-decoration: none;
+	font-size: 0.7em;
+	margin-top: 0.1em;
+	padding: 0.3em;
+	margin-left: 0.7em;
+
+}
+
+.salebanners{
+display: flex;
+width: 100%;
+height: auto;
+justify-content: center;
+align-items: center;
+padding: 0;
+margin: 0;
+gap: 2em;
+}
 /* jouw code */
+
+figure{
+	margin: 0;
+}
+
+#categories {
+    display: flex;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0;
+    list-style: none;
+	gap: 1.25em;}
+
+	#categories li {
+		scroll-snap-align: center;
+	}
+
+	#categories button {
+		border: none;
+		background: none;
+	}
+
+	#categories img {
+		max-width: 18em;
+		display: block;
+	}
+
+	.yourdiscoveryqueue img{
+	display: flex;
+	width: 100%;
+	height: auto;
+	justify-content: center;
+	align-items: center;
+	}
+
+
+.yourdiscoveryqueue{
+	position: relative;
+}
+
+.yourdiscoveryqueue a:nth-child(3){
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	background-color: var(--color-background-blue);
+	color: white;
+	font-size: 16px;
+	padding: 12px 24px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	width: 80%;
+  }
+
+.browsebuttonlist{
+		list-style-type: none;
+		display: flex;
+		flex-wrap: wrap;
+		align-content: flex-start;
+		gap: 0.8em;
+		margin: 0;
+		padding: 0;
+	}
+
+	.browsebuttonlist li{
+		flex-grow: 1;
+		flex-basis: 12em;
+	}
+.browsebuttonlist button{
+	background-image: linear-gradient(#08baff, #2c74ff);
+    font-size: 1em;
+	border: none;
+    border-radius: 0.2em;
+	height: 4em;
+	width: 100%;
+	text-align: center;
+}
+
+.browsebuttonlist a{
+	display: inline-block;
+	width: 100%;
+    text-decoration: none;
+	color: var(--color-text);
+	padding: 2em;
+	background-image: linear-gradient(#08baff, #2c74ff);
+    font-size: 1em;
+	border: none;
+    border-radius: 0.2em;
+	text-align: center;
+}
+
+
+.curatorrecommendation figure img{
+	float: left;
+}
+
+.curatorrecommendation figure {
+	background-image: linear-gradient( #0c1721 70%, #1b3147);
+	width: 100%;
+	height: auto;
+	box-shadow: 0.09em 0.03em 0.1em black;
+	float: left;
+	margin-bottom: 2em;
+}
+
+.curatorrecommendation p{
+	font-style: italic;
+}
+
+
+
+a:hover {
+	background-color: orangered;
+	transition: 0.3s;
+	
+  }
+
+footer{
+	background-color: var(--color-background);
+}
+
+footer section p{
+	padding: 2em;
+}
+
+a:active {
+	color: red;
+  }
+
+
+
+
+  .dark{
+	background-color: white;
+	color: black;
+  }
+/*vragen*
+1. Hamburger menu 
+2. Hoe maak ik de nav bar responsive
+3. Menu aan de linkerkant
+4. positioneren van detailpagina
+(width > 40em)/
+
+
+
+
+
 
