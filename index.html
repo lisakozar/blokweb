@@ -1,32 +1,36 @@
 <!doctype html>
 <html lang="nl">
-	
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="author" content="Lisa Kozar">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	
+
+
 	<title>Steam</title>
-	
+
 	<link href="./styles/style.css" rel="stylesheet">
+	<link href="styles\algemenestijl.css" rel="stylesheet">
 	<link rel="icon" type="image/x-icon" href="./images\steamfavicon.png">
+	<script defer src="scripts/script.js"></script>
 </head>
 
 <header>
 	<h1>Steam</h1>
-	<button id="hamburger" aria-label="menu"><img src="images\hamburger.png"></button>
+	<button id="hamburger" aria-label="menu"><img src="images\hamburger.png" alt="hamburger button"></button>
+	<!-- dit is de navigatie met sidebar die openklapt bron: https://codepen.io/shooft/pen/KKbQVNy -->
 	<nav>
 		<button id="close"><img src="images\kruisje.png" aria-label="Close menu" alt="close menu button"></button>
-		<ul >
-		<section class="mainnavigation">
-			<li></li>
-			<li><a href="">Notifications</a></li>
-			<li><a href="">Store</a></li>
-			<li><a href="">Community</a></li>
-			<li><a href="">You & Friends</a></li>
-			<li><a href="">Support</a></li>
-		</section>
+		<ul>
+			<section class="mainnavigation">
+				<li></li>
+				<li><a href="">Notifications</a></li>
+				<li><a href="">Store</a></li>
+				<li><a href="">Community</a></li>
+				<li><a href="">You & Friends</a></li>
+				<li><a href="">Support</a></li>
+			</section>
+			<!-- De section is voor de 'main navigation, dit is de hoofdnavigatie en daaronder is een kleinere gedetailleerde navigatie -->
 			<li><a href="">Account details</a></li>
 			<li><a href="">Store preferences</a></li>
 			<li><a href="">Change language</a></li>
@@ -34,12 +38,11 @@
 			<li><a href="">View desktop website</a></li>
 		</ul>
 	</nav>
-	<a href="index.html"><img src="./images/steamlogo.png"  alt="steam homepagina"></a> 
+	<a href="index.html"><img src="./images/steamlogo.png" alt="steam homepagina"></a>
 </header>
 
 <body>
-	
-	
+<!-- Tweede navigatie is de navigatie die altijd te zien is -->
 	<ul class="tweedenavigatie">
 		<li><a href="index.html">Your store</a></li>
 		<li><a href="index.html">New & Noteworthy</a></li>
@@ -47,158 +50,188 @@
 		<li><a href="index.html">Points shop</a></li>
 		<li><a href="index.html">News</a></li>
 		<li><a href="index.html">Labs</a></li>
-		<li></li>
-	  </ul>
+		<li>
+			<form id="form" class="search">
+				<input type="search" aria-label="search" placeholder="Search">
+				<button>
+					<img src="images\searchicon.png" alt="search icon">
+				</button>
+			</form>
+		</li>
+	</ul>
 
-	  
 
-	  <a href=""><img src="./images\steamthumbnailgif.gif" alt="Steam jubileum thumbnail" class="steamthumbnail1"></a>
-	  <a href=""><img src="./images\publishersaleklein.png" alt="Steam jubileum thumbnail" class="steamthumbnail2"></a>
-	
+<!-- De twee thumbnail die te zien zijn op de homepagina. Het zijn twee classes omdat het veranderd van een bewegend plaatje naar een stil plaatje -->
+	<a href=""><img src="./images\steamthumbnailgif.gif" aria-label="Publisher sale" alt="Steam jubileum thumbnail" class="steamthumbnail1"></a>
+	<a href=""><img src="./images\publishersaleklein.png" aria-label="Publisher sale" alt="Steam jubileum thumbnail" class="steamthumbnail2"></a>
 
+<!-- carousel met links naar gamepaginas -->
 	<h2>Featured & Recommended </h2>
+	<!-- class omdat het vaker gebruikt gaat worden maar dan op andere manier -->
 	<ul class="gamecards">
-	<li><a href="./detailpagina.html" aria-label= "Resident evil 4">
-        <figure>
-            <img src="images\residentevil4.jpg" alt="Resident evil 4 thumbnail">
-            <figcaption>
-                <h3>Resident evil 4</h3>
-                <h4>59,99€</h4></figcaption></figure>
-				</li></a>
+		<li><a href="./detailpagina.html" aria-label="Resident Evil 4">
+				<figure>
+					<img src="images\residentevil4.jpg" alt="Resident evil 4 thumbnail">
+					<figcaption>
+						<h3>Resident Evil 4</h3>
+						<h4>59,99€</h4>
+					</figcaption>
+				</figure>
+		</li></a>
 
-				<li><a href="./detailpagina.html" aria-label= "Cyberpunk 2077">
+		<li><a href="./detailpagina.html" aria-label="Cyberpunk 2077">
+				<figure>
+					<img src="images\cyberpunk.jpg" alt="Cyberpunk 2077 thumbnail">
+					<figcaption>
+						<h3>Cyberpunk 2077</h3>
+						<h4>59,99€</h4>
+					</figcaption>
+				</figure>
+		</li></a>
+
+		<li><a href="./detailpagina.html" aria-label="Baldur's gate 3">
+				<figure>
+					<img src="images\baldursgate.jpg" alt="Baldurs gate 3 thumbnail">
+					<figcaption>
+						<h3>Baldur's gate 3</h3>
+						<h4>59,99€</h4>
+					</figcaption>
+				</figure>
+		</li></a>
+	</ul>
+<!-- section voor de sale gifs -->
+	<section class="salebanners">
+		<a href="">
+			<img src="./images\deckbanner.gif" alt="steam deck sale thumbnail">
+		</a>
+		<a href="">
+			<img src="images\valveindex.jpg" alt="valve index sale thumbnail">
+		</a>
+	</section>
+	<!-- section voor special offer, hier word de class gamecards weer gebruikt -->
+	<section class="specialoffer">
+		<h2>Special offers</h2>
+		<ul class="gamecards">
+			<li> <a href="" aria-label="WWE 2023">
 					<figure>
-						<img src="images\cyberpunk.jpg" alt="Cyberpunk 2077 thumbnail">
+						<img src="images\wk2k23.png" alt="wwe 2023 thumbnail">
 						<figcaption>
-							<h3>Cyberpunk 2077</h3>
-							<h4>59,99€<h4></figcaption></figure>
-							</li></a>
+							<h3>WWE 2023</h3>
+							<h4>59,99€</h4>
+							</figure>
+			</li></a>
 
-			
-				<li><a href="./detailpagina.html" aria-label= "Baldur's gate 3">
+			<li> <a href="">
 					<figure>
-						<img src="images\baldursgate.jpg" alt="Baldurs gate 3 thumbnail">
+						<img src="images\domekeeper.jpg" alt="dome keeper thumbnail">
 						<figcaption>
-							<h3>Baldur's gate 3</h3>
-							<h4>59,99€<h4></figcaption></figure>
-							</li></a></ul>
-				
-<section class="salebanners">
-	<a href="">
-	<img src="./images\deckbanner.gif" alt="steam deck sale thumbnail">
-</a>
-<a href="">
-	<img src="images\valveindex.jpg" alt="valve index sale thumbnail">
-</a>
-</section>
-<section class="specialoffer">
-<h2>Special offers</h2>
-<ul class="gamecards">
-	<li>  <a href="" aria-label="Baldur's gate 3">
-        <figure>
-            <img src="images\wk2k23.png"alt="baldurs gate thumbnail">
-            <figcaption>
-                <h3>Placeholder</h3>
-                <h4>59,99€<h4>
-				</li></a>
+							<h3>Dome keeper</h3>
+							<h4>19,99€</h4>
+							</figure>
+			</li></a>
 
-				<li> <a href="">
+
+			<li> <a href="#">
 					<figure>
-						<img src="images\wk2k23.png"alt="the elder scrolls online thumbnail">
+						<img src="images\golfwithfriends.jpg" alt="Golf with friends thumbnail">
 						<figcaption>
-							<h3>Placeholder</h3>
-							<h4>19,99€<h4>
-							</li></a>
+							<h3>Golf with friends</h3>
+							<h4>4,99€</h4>
+							</figure>
+			</li></a>
 
-			
-				<li> <a href="#">
-					<figure>
-						<img src="images\wk2k23.png" alt="baldurs gate thumbnail">
-						<figcaption>
-							<h3>Placeholder</h3>
-							<h4>59,99€<h4>
-							</li></a>
+			<li> <a href="" aria-label="WWE 2023">
+				<figure>
+					<img src="images\wk2k23.png" alt="wwe 2023 thumbnail">
+					<figcaption>
+						<h3>WWE 2023</h3>
+						<h4>59,99€</h4>
+						</figure>
+		</li></a>
 
-							<li> <a href="">
-								<figure>
-									<img src="images\wk2k23.png" alt="baldurs gate thumbnail">
-									<figcaption>
-										<h3>Placeholder</h3>
-										<h4>59,99€<h4>
-										</li></a>
+		<li> <a href="">
+				<figure>
+					<img src="images\domekeeper.jpg" alt="dome keeper thumbnail">
+					<figcaption>
+						<h3>Dome keeper</h3>
+						<h4>19,99€</h4>
+						</figure>
+		</li></a>
 
-										<li> <a href="">
-											<figure>
-												<img src="images\wk2k23.png" alt="baldurs gate thumbnail">
-												<figcaption>
-													<h3>Placeholder</h3>
-													<h4>59,99€<h4>
-													</li></a>
 
-													<li> <a href="">
-														<figure>
-															<img src="images\wk2k23.png" alt="baldurs gate thumbnail">
-															<figcaption>
-																<h3>Placeholder</h3>
-																<h4>59,99€<h4>
-																</li></a></ul>
-															</section>
+		<li> <a href="#">
+				<figure>
+					<img src="images\golfwithfriends.jpg" alt="Golf with friends thumbnail">
+					<figcaption>
+						<h3>Golf with friends</h3>
+						<h4>4,99€</h4>
+						</figure>
+		</li></a>
+		</ul>
+	</section>
 
 	<h2>Browse by category</h2>
-	<ul id="categories">
+	<ul class="categories">
 		<li>
-			<a href=""><img src="./images\adventure.png" alt="adventure button"></a>
-		  </button></li>
-		  <li>
-			<a href=""><img src="./images\coop.png" alt="co-op button"></a>
-		  </button></li>
-		  <li>
-			<a href=""><img src="./images\openworld.png" alt="openworld button"></a>
-		  </button></li>
-		  <li>
-			<a href=""><img src="./images\scifi.png" alt="sci-fi button"></a>
-		  </button></li>
+			<a href=""><img src="./images\adventure.png" alt=" adventure category"></a>
+		</li>
+		<li>
+			<a href=""><img src="./images\coop.png" alt=" co-op category"></a>
+		</li>
+		<li>
+			<a href=""><img src="./images\openworld.png" alt=" openworld category"></a>
+		</li>
+		<li>
+			<a href=""><img src="./images\scifi.png" alt="sci-fi category "></a>
+		</li>
 	</ul>
-	
+
 	<section class="yourdiscoveryqueue">
-	<h2>Your discovery queue</h2>
-	<a href="#">
-		<img src="images\discoveryqueue.png">
-	</a>
-	<a href="">Click here to begin exploring your queue</a>
-</section>
+		<h2>Your discovery queue</h2>
+		<a href="#">
+			<img src="images\discoveryqueue.png" alt="your discovery queue">
+		</a>
+		<a href="">Click here to begin exploring your queue</a>
+	</section>
 
 	<h2>Browse Steam</h2>
 	<ul class="browsebuttonlist">
-	<li><a href="#">New Releases</a></li>
-	<li><a href="#">Specials</a></li>
-	<li><a href="#">Free games</a></li>
-	<li><a href="#">By User Tags</a></li>
-</ul>
+		<li><a href="#">New Releases</a></li>
+		<li><a href="#">Specials</a></li>
+		<li><a href="#">Free games</a></li>
+		<li><a href="#">By User Tags</a></li>
+	</ul>
 
-<section class="curatorrecommendation">
-	<h2>Curator recommendation</h2>
-	<figure>
-	<a href="#">
-		<img src="images\outlast.jpg">
-	</a>
-	<figcaption><p>"Very scary game :/"</p></figcaption>
-</figure>
-</section>
+	<section class="curatorrecommendation">
+		<h2>Curator recommendation</h2>
+		<figure>
+			<a href="#">
+				<img src="images\stardewvalley.jpg" alt="stardew valley thumbnail">
+			</a>
+			<figcaption>
+				<p>"Very wholesome cute game :D"</p>
+				<img src="images\cat.png" alt="curator profile picture"> <p>- Joe</p>
+			</figcaption>
+		</figure>
+	</section>
 
-<button onclick="darkMode()">Darkmode</button>
-<button onclick="lightMode()">LightMode</button>
+
+	<footer>
+		<section>
+			<p>© 2023 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in
+				the US and other countries.
+				VAT included in all prices where applicable. </p>
+			<a href="#">Privacy policy</a>
+			<a href="#">Legal</a>
+			<a href="#">Steam Subscriber Agreement</a>
+			<a href="#">Refunds</a>
+			<a href="#">Privacy policy</a>
+			<a href="#">Cookies</a>
+		</section>
+	</footer>
 
 
 
-<footer>
-	<section>
-	<p>© 2023 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.
-VAT included in all prices where applicable. </p>
-</section>
-</footer>
-
-<script defer src="scripts/script.js"></script>
 </body>
-	
+
 </html>

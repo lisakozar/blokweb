@@ -1,28 +1,21 @@
 /**************/
 /* CSS REMEDY */
 /**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
 }
-
-
-
-
-
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
 	/* startje */
-	--color-text:#fff;
-	--color-background: #181c24;
+	--color-text: #fff;
+	--color-background: #171d25;
 	--color-background-blue: #5f849a;
 }
-
-
-
-
 
 /****************/
 /* JOUW STYLING */
@@ -31,17 +24,17 @@
 	font-family: 'Steamfont';
 	src: url('../fonts/MotivaSans-Regular.ttf') format('truetype');
 	font-weight: normal;
-  }
+}
 
 html {
 	font-family: 'Steamfont';
 }
 
-header{ 
+header {
 	position: sticky;
 	top: 0em;
- 	width: 100%;
-	height: 4em;
+	width: 100%;
+	height: 6em;
 	background-color: var(--color-background);
 	z-index: 100;
 	text-align: center;
@@ -50,23 +43,23 @@ header{
 	align-items: center;
 }
 
-header nav{
+header nav {
 	position: fixed;
-	top:0;
-	bottom:0;
-	left:0;
-	translate:-100% 0%;
-	transition:.5s;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	translate: -100% 0%;
+	transition: .5s;
 	background-color: var(--color-background);
 	padding: 0;
 	margin: 0;
 }
 
 header nav.open {
-	translate:0% 0%;
+	translate: 0% 0%;
 	background-color: var(--color-background);
 	list-style-type: none;
-}	
+}
 
 header nav ul {
 	list-style-type: none;
@@ -74,69 +67,70 @@ header nav ul {
 	text-align: left;
 	padding: 0;
 	width: 100%;
-	
+
 
 }
 
-header nav ul li{
+header nav ul li {
 	padding: 0.5em;
 	width: auto;
 }
 
-header nav ul a{
+header nav ul a {
 	color: whitesmoke;
 	text-decoration: none;
-	background-color: var(--color-background-blue);
-	padding: 0;
-	width: 3em;
+
+	width: 100%;
 }
 
-.mainnavigation{
-	font-size: 1.5em;
-}
 
-header img{
+
+header a img {
 	/* https://stackoverflow.com/questions/38488069/how-can-i-move-display-inline-block-to-the-right */
-	max-width: 7.3em;
-	max-height: auto;
-	display: inline;
+	width: 9em;
+	display: flex;
 	position: relative;
+
 }
 
-h1{
+
+
+
+h1 {
 	display: none;
 }
 
-#hamburger{
+#hamburger {
 	all: unset;
 	justify-self: start;
 	margin-left: 1em;
 
-	
+
 }
 
-header button img{
+header button img {
 	max-width: 2em;
 	height: auto;
 	display: inline;
 	position: relative;
 }
 
-.mainnavigation li a{
+.mainnavigation li a {
 	width: 100%;
 	height: auto;
-	padding: 0.3em;
 	display: flex;
 	left: 0;
 	right: 0;
-	margin: 0;
+	padding: 0.3em 0 0.3em 0;
+
+	margin-left: 0;
+	font-size: 1.5em;
 
 
 }
 
-.mainnavigation button{
+.mainnavigation button {
 	background: transparent;
-	float: right;
 	margin-bottom: 1em;
 }
 
@@ -147,57 +141,114 @@ header button img{
 	font-family: 'Steamfont';
 	font-weight: normal;
 	background-image: linear-gradient(to right, #406494, #346ca0, #244c88, #182474);
-	text-align: center;
-	
-  }
-  
-  .tweedenavigatie li a{
+	text-align: left;
+	margin-top: 2em;
+	margin-bottom: 2em;
+
+}
+
+.tweedenavigatie li a {
 	display: inline-block;
 	width: 100%;
 	font-family: 'Steamfont';
+	font-size: 0.8em;
 	color: var(--color-text);
 	text-decoration: none;
 	text-align: center;
-	padding: 0.6em;
+	padding: 0.8em;
+	gap: 0.3em;
+	font-weight: bold;
+	text-shadow: 0.063em 0.063em 0.063em black;
+	padding-left: 1em;
 }
 
-.tweedenavigatie li{
+.tweedenavigatie li {
 	display: inline-flex;
 	flex-direction: row;
 	justify-content: space-between;
-	
+
 	align-items: center;
 }
 
 
 @media screen and (max-width: 600px) {
 	.tweedenavigatie li {
-	  display: flex;
-	width: 100%;
-	background-image: linear-gradient(to right, #406494, #346ca0, #244c88, #182474);
-	justify-content: center;
-	font-family: 'Motiva';
-	color: var(--color-text);
-	text-decoration: none;
-	text-align: left;
-	padding: 0.6em;
+		display: flex;
+		width: 100%;
+		background-image: linear-gradient(to right, #406494, #346ca0, #244c88, #182474);
+		justify-content: center;
+		font-family: 'Motiva';
+		color: var(--color-text);
+		text-decoration: none;
+		text-align: left;
+		padding: 0.6em;
+
+		.salebanners {
+			flex-direction: column;
+			/* Stack images vertically */
+			align-items: center;
+			/* Center images horizontally */
+		}
+	}
+
 }
+
+/* Tablet Styles (768px to 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 950px) {
+	header {
+		height: 4em;
+		/* Adjust the header height for tablets */
+	}
+
+	body {
+		max-width: 50em;
+
+	}
+
+	header a img {
+		width: 7em;
+		/* Reduce the logo size for tablets */
+	}
+
+	header nav ul li {
+		font-size: 1.2em;
+		/* Adjust the font size of navigation links for tablets */
+		padding: 0.3em;
+		/* Adjust the padding of navigation links for tablets */
+	}
+
+	.salebanners img {
+		max-width: none;
+	}
+
+	/* Add more styles as needed for tablet layout adjustments */
 }
 
 
 form input[type="search"] {
 	text-align: left;
-	width: 100%;
-	height: 2em;
-	background-color: (var(--color-background-blue));
+	background-color: #316282;
 	border-color: black;
 	border-radius: 0.3em;
-	position: absolute;
-	font-size: 1em;
+	font-size: 0.9em;
+	padding: 0.2em;
+	padding-left: 1em;
+	gap: 2em;
 
 }
 
-form button{
+ul li form button {
+	height: 2em;
+	width: 2em;
+	border-radius: 0.3em;
+	background-color: lightblue;
+}
+
+li:nth-of-type(7) {
+	margin-left: 11.5em;
+}
+
+form button {
 	width: 2.5em;
 	height: 2.5em;
 	position: relative;
@@ -208,45 +259,62 @@ form button{
 }
 
 
-body{
-max-width: 60em;
-margin: 0 auto; 
-color: var(--color-text);
-background-color: #202c3c;
-/*margin: 0 10em 0 10em;*/
+body {
+	max-width: 60em;
+	margin: 0 auto;
+	color: var(--color-text);
+	background-color: #202c3c;
+	/*margin: 0 10em 0 10em;*/
 }
 
-.steamthumbnail1{
+.steamthumbnail1 {
 	display: block;
 	width: 100%;
 }
 
-.steamthumbnail2{
+
+.steamthumbnail2 {
 	display: none;
 }
 
 @media screen and (max-width: 600px) {
 	.steamthumbnail1 {
-	  display: none;
-}
-.steamthumbnail2{
-	display: block;
-	width: 100%;
-}
+		display: none;
+	}
+
+	.steamthumbnail2 {
+		display: block;
+		width: 100%;
+	}
+
+	li:nth-of-type(7) {
+		margin-left: 0;
+	}
+
+	.salebanners {
+		flex-direction: column;
+		/* Stack images vertically */
+		align-items: center;
+		/* Center images horizontally */
+	}
+
+	.salebanners img {
+		max-width: none;
+	}
 }
 
 
-h2{
-font-size: 0.9em;
-text-transform: uppercase;
-position: relative;
+h2 {
+	font-size: 0.9em;
+	text-transform: uppercase;
+	position: relative;
 }
 
 ul.gamecards {
 	padding: 0;
 	display: flex;
 	scroll-snap-type: x mandatory;
-	overflow-x: scroll; 
+	overflow-x: scroll;
 	flex-direction: row;
 	justify-content: flex-start;
 	list-style: none;
@@ -258,21 +326,42 @@ ul.gamecards li a {
 	color: var(--color-text);
 }
 
-ul.gamecards figure{
-	background-image: linear-gradient( #0c1721 70%, #1b3147);
+.gamecards li a:focus {
+	outline: 0.438em solid pink;
+}
+
+li a:focus {
+	outline: 0.438em solid pink;
+}
+
+a:focus {
+	outline: 0.438em solid pink;
+}
+
+form input[type="search"]:focus {
+	outline: 0.438em solid pink;
+}
+
+ul li form button:focus {
+	outline: 0.438em solid pink;
+
+}
+
+ul.gamecards figure {
+	background-image: linear-gradient(#0c1721 70%, #1b3147);
 	width: 24em;
 	height: auto;
 	box-shadow: 0.09em 0.03em 0.1em black;
 	scroll-snap-type: x mandatory;
 }
 
-li img{
+li img {
 	max-width: 100%;
 	max-height: auto;
 }
 
-.specialoffer .gamecards li figure{
-	background-image: linear-gradient( #217399, #1c658b);
+.specialoffer .gamecards li figure {
+	background-image: linear-gradient(#217399, #1c658b);
 	width: 19em;
 	height: 24em;
 	box-shadow: 0.05em 0.05em 0.1em black;
@@ -280,14 +369,18 @@ li img{
 	justify-content: flex-start;
 	/*margin-left: 1em;*/
 }
-.specialoffer .gamecards li figure img{
-width: 19em;
-height: 18em;
-	
-	
+
+.specialoffer li figure img {
+	width: 19em;
+	height: 18em;
 }
 
-h3{
+
+.yourdiscoveryqueue a:focus {
+	outline: 0.438em solid pink;
+}
+
+h3 {
 	color: var(--color-text);
 	text-decoration: none;
 	font-size: 1.2em;
@@ -297,70 +390,114 @@ h3{
 
 }
 
-h4{
+h4 {
 	color: (var(--color-text));
 	text-decoration: none;
 	font-size: 0.7em;
 	margin-top: 0.1em;
 	padding: 0.3em;
 	margin-left: 0.7em;
+	margin-bottom: 0.3em;
 
 }
 
-.salebanners{
-display: flex;
-width: 100%;
-height: auto;
-justify-content: center;
-align-items: center;
-padding: 0;
-margin: 0;
-gap: 2em;
+.specialoffer h4{
+	color: (var(--color-text));
+	text-decoration: none;
+	font-size: 0.7em;
+	margin-top: 0.1em;
+	padding: 0.3em;
+	margin-left: 0.7em;
+	background-color: #5f849a;
+	width: 4.5em;
+
 }
+
+
+
+.salebanners {
+	display: flex;
+	height: auto;
+	justify-content: center;
+	align-items: center;
+	gap: 2em;
+}
+
+.salebanners img {
+	max-width: 100%;
+	/* Make the images scale to fit their parent container */
+	height: auto;
+	/* Maintain the images' aspect ratio */
+}
+
+
+
+
+.salebanners a:focus {
+	outline: 0.438em solid pink;
+}
+
+
 /* jouw code */
 
-figure{
+figure {
 	margin: 0;
 }
 
-#categories {
-    display: flex;
-    scroll-snap-type: x mandatory;
-    overflow-x: scroll;
-    flex-direction: row;
-    justify-content: flex-start;
-    padding: 0;
-    list-style: none;
-	gap: 1.25em;}
+.categories {
+	display: flex;
+	scroll-snap-type: x mandatory;
+	overflow-x: scroll;
+	flex-direction: row;
+	justify-content: flex-start;
+	padding: 0;
+	list-style: none;
+	gap: 1.25em;
+}
 
-	#categories li {
-		scroll-snap-align: center;
-	}
+.categories li {
+	scroll-snap-align: center;
+}
 
-	#categories button {
-		border: none;
-		background: none;
-	}
 
-	#categories img {
-		max-width: 18em;
-		display: block;
-	}
+.categories img {
+	max-width: 18em;
+	display: block;
+}
 
-	.yourdiscoveryqueue img{
+
+.categories li a:hover {
+	opacity: 0.8;
+	transition: 0.3s;
+}
+
+.categories li a:focus {
+	outline: 0.438em solid pink;
+}
+
+.yourdiscoveryqueue img {
 	display: flex;
 	width: 100%;
 	height: auto;
 	justify-content: center;
 	align-items: center;
-	}
+}
 
+.yourdiscoveryqueue img:hover {
+	opacity: 0.6;
+	transition: 0.3s;
 
-.yourdiscoveryqueue{
+}
+
+.yourdiscoveryqueue a:focus {
+	outline: 0.438em solid pink;
+}
+
+.yourdiscoveryqueue {
 	position: relative;
 }
 
-.yourdiscoveryqueue a:nth-child(3){
+.yourdiscoveryqueue a:nth-child(3) {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -374,52 +511,70 @@ figure{
 	cursor: pointer;
 	border-radius: 5px;
 	width: 80%;
-  }
+}
 
-.browsebuttonlist{
-		list-style-type: none;
-		display: flex;
-		flex-wrap: wrap;
-		align-content: flex-start;
-		gap: 0.8em;
-		margin: 0;
-		padding: 0;
-	}
+.browsebuttonlist {
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	gap: 0.8em;
+	margin: 0;
+	padding: 0;
+}
 
-	.browsebuttonlist li{
-		flex-grow: 1;
-		flex-basis: 12em;
-	}
-.browsebuttonlist button{
+.browsebuttonlist li {
+	flex-grow: 1;
+	flex-basis: 12em;
+}
+
+.browsebuttonlist a {
 	background-image: linear-gradient(#08baff, #2c74ff);
-    font-size: 1em;
+	font-size: 1em;
 	border: none;
-    border-radius: 0.2em;
-	height: 4em;
+	border-radius: 0.2em;
+	height: 5em;
 	width: 100%;
 	text-align: center;
 }
 
-.browsebuttonlist a{
+.browsebuttonlist a:hover {
+	background-image: linear-gradient(#7bdaff, #5f86d4);
+	transition: 0.3s;
+}
+
+.browsebuttonlist a:focus {
+	outline: 0.438em solid pink;
+}
+
+
+
+.browsebuttonlist a {
 	display: inline-block;
 	width: 100%;
-    text-decoration: none;
+	text-decoration: none;
 	color: var(--color-text);
 	padding: 2em;
 	background-image: linear-gradient(#08baff, #2c74ff);
-    font-size: 1em;
+	font-size: 1em;
 	border: none;
-    border-radius: 0.2em;
+	border-radius: 0.2em;
 	text-align: center;
 }
 
 
-.curatorrecommendation figure img{
+.curatorrecommendation figure img {
 	float: left;
+	width: 35em;
+}
+
+.curatorrecommendation figcaption img{
+	width: 5em;
+	padding: 0.2em;
 }
 
 .curatorrecommendation figure {
-	background-image: linear-gradient( #0c1721 70%, #1b3147);
+	background-image: linear-gradient(#0c1721 70%, #1b3147);
 	width: 100%;
 	height: auto;
 	box-shadow: 0.09em 0.03em 0.1em black;
@@ -427,37 +582,37 @@ figure{
 	margin-bottom: 2em;
 }
 
-.curatorrecommendation p{
+.curatorrecommendation p {
 	font-style: italic;
 }
 
 
 
 a:hover {
-	background-color: orangered;
+	background-color: pink;
 	transition: 0.3s;
-	
-  }
+}
 
-footer{
+footer {
 	background-color: var(--color-background);
 }
 
-footer section p{
+footer section p {
 	padding: 2em;
 }
 
 a:active {
 	color: red;
-  }
+}
 
 
 
 
-  .dark{
+.dark {
 	background-color: white;
 	color: black;
-  }
+}
+
 /*vragen*
 1. Hamburger menu 
 2. Hoe maak ik de nav bar responsive
@@ -468,5 +623,91 @@ a:active {
 
 
 
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+	position: relative;
+}
+
+.row {
+	list-style-type: none;
+}
+
+.container .mySlides video {
+	width: 37.5em;
+}
+
+.container .mySlides img {
+	width: 37.5em;
+}
+
+/* Hide the images by default */
+.mySlides {
+	display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+	cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+	cursor: pointer;
+	position: absolute;
+	top: 70%;
+	width: auto;
+	padding: 16px;
+	margin-top: -50px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
 
 
+
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Six columns side by side */
+.column {
+	float: left;
+	width: 25%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+	opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+	opacity: 1;
+}
+
+footer a {
+	text-decoration: none;
+	color: var(--color-text);
+	display: inline-block;
+	margin-left: 2em;
+	font-size: 0.6em;
+}
