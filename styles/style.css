@@ -36,7 +36,8 @@ header {
 	width: 100%;
 	height: 6em;
 	background-color: var(--color-background);
-	z-index: 100;
+	/* zorgt ervoor dat het voor andere elementen staat */
+	z-index: 100; 
 	text-align: center;
 	display: grid;
 	grid-template-columns: 1fr min-content 1fr;
@@ -68,7 +69,6 @@ header nav ul {
 	padding: 0;
 	width: 100%;
 
-
 }
 
 header nav ul li {
@@ -79,11 +79,9 @@ header nav ul li {
 header nav ul a {
 	color: whitesmoke;
 	text-decoration: none;
-
-	width: 100%;
+	padding: 0;
+	width: 3em;
 }
-
-
 
 header a img {
 	/* https://stackoverflow.com/questions/38488069/how-can-i-move-display-inline-block-to-the-right */
@@ -92,10 +90,7 @@ header a img {
 	position: relative;
 
 }
-
-
-
-
+/* zodat het niet te zien is */
 h1 {
 	display: none;
 }
@@ -104,41 +99,39 @@ h1 {
 	all: unset;
 	justify-self: start;
 	margin-left: 1em;
-
-
-}
-
-header button img {
+  
+  
+  }
+  
+  header button img {
 	max-width: 2em;
 	height: auto;
 	display: inline;
 	position: relative;
-}
-
-.mainnavigation li a {
+  }
+  
+  .mainnavigation li a {
 	width: 100%;
 	height: auto;
+	padding: 0.3em;
 	display: flex;
 	left: 0;
 	right: 0;
-	padding: 0.3em 0 0.3em 0;
-
-	margin-left: 0;
-	font-size: 1.5em;
-
-
-}
-
-.mainnavigation button {
+	margin: 0;
+  
+  
+  }
+  
+  .mainnavigation button {
 	background: transparent;
+	float: right;
 	margin-bottom: 1em;
-}
+  }  
 
 .tweedenavigatie {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	font-family: 'Steamfont';
 	font-weight: normal;
 	background-image: linear-gradient(to right, #406494, #346ca0, #244c88, #182474);
 	text-align: left;
@@ -150,7 +143,6 @@ header button img {
 .tweedenavigatie li a {
 	display: inline-block;
 	width: 100%;
-	font-family: 'Steamfont';
 	font-size: 0.8em;
 	color: var(--color-text);
 	text-decoration: none;
@@ -166,7 +158,6 @@ header button img {
 	display: inline-flex;
 	flex-direction: row;
 	justify-content: space-between;
-
 	align-items: center;
 }
 
@@ -181,23 +172,22 @@ header button img {
 		color: var(--color-text);
 		text-decoration: none;
 		text-align: left;
-		padding: 0.6em;
+		padding: 0.6em;}
 
 		.salebanners {
 			flex-direction: column;
-			/* Stack images vertically */
+			/* zet ze onder elkaar */
 			align-items: center;
-			/* Center images horizontally */
+			/* centered het in het midden */
 		}
 	}
 
-}
 
-/* Tablet Styles (768px to 1024px) */
-@media only screen and (min-width: 768px) and (max-width: 950px) {
+
+/* tablet style (768px tot 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
 	header {
 		height: 4em;
-		/* Adjust the header height for tablets */
 	}
 
 	body {
@@ -207,21 +197,19 @@ header button img {
 
 	header a img {
 		width: 7em;
-		/* Reduce the logo size for tablets */
 	}
 
 	header nav ul li {
 		font-size: 1.2em;
-		/* Adjust the font size of navigation links for tablets */
+
 		padding: 0.3em;
-		/* Adjust the padding of navigation links for tablets */
+
 	}
 
 	.salebanners img {
 		max-width: none;
 	}
 
-	/* Add more styles as needed for tablet layout adjustments */
 }
 
 
@@ -243,7 +231,7 @@ ul li form button {
 	border-radius: 0.3em;
 	background-color: lightblue;
 }
-
+/* search button */
 li:nth-of-type(7) {
 	margin-left: 11.5em;
 }
@@ -259,13 +247,6 @@ form button {
 }
 
 
-body {
-	max-width: 60em;
-	margin: 0 auto;
-	color: var(--color-text);
-	background-color: #202c3c;
-	/*margin: 0 10em 0 10em;*/
-}
 
 .steamthumbnail1 {
 	display: block;
@@ -367,7 +348,6 @@ li img {
 	box-shadow: 0.05em 0.05em 0.1em black;
 	scroll-snap-type: x mandatory;
 	justify-content: flex-start;
-	/*margin-left: 1em;*/
 }
 
 .specialoffer li figure img {
@@ -379,6 +359,7 @@ li img {
 .yourdiscoveryqueue a:focus {
 	outline: 0.438em solid pink;
 }
+
 
 h3 {
 	color: var(--color-text);
@@ -505,12 +486,17 @@ figure {
 	-ms-transform: translate(-50%, -50%);
 	background-color: var(--color-background-blue);
 	color: white;
-	font-size: 16px;
-	padding: 12px 24px;
+	font-size: 1em;
+	padding: 0.75em 1.5em;
 	border: none;
 	cursor: pointer;
-	border-radius: 5px;
+	border-radius: 0.3125em;
 	width: 80%;
+}
+
+.yourdiscoveryqueue a:nth-child(3):hover {
+	background-color: #08baff;
+	transition: 0.3s;
 }
 
 .browsebuttonlist {
@@ -522,7 +508,8 @@ figure {
 	margin: 0;
 	padding: 0;
 }
-
+/* het element groeit mee met de content
+Zorgt voor de grootte van een basis flex item */
 .browsebuttonlist li {
 	flex-grow: 1;
 	flex-basis: 12em;
@@ -546,8 +533,6 @@ figure {
 .browsebuttonlist a:focus {
 	outline: 0.438em solid pink;
 }
-
-
 
 .browsebuttonlist a {
 	display: inline-block;
@@ -602,7 +587,7 @@ footer section p {
 }
 
 a:active {
-	color: red;
+	color: pink;
 }
 
 
@@ -640,61 +625,52 @@ a:active {
 	width: 37.5em;
 }
 
-/* Hide the images by default */
+/* Verstopt de plaatjes */
 .mySlides {
 	display: none;
 }
 
-/* Add a pointer when hovering over the thumbnail images */
 .cursor {
 	cursor: pointer;
 }
 
-/* Next & previous buttons */
+/* volgende en terug knopjes*/
 .prev,
 .next {
 	cursor: pointer;
 	position: absolute;
 	top: 70%;
 	width: auto;
-	padding: 16px;
-	margin-top: -50px;
+	padding: 1em;
+	margin-top: -3.125em;
 	color: white;
 	font-weight: bold;
-	font-size: 20px;
-	border-radius: 0 3px 3px 0;
+	font-size: 1.25em;
+	border-radius: 0 0.1875em 0.1875em 0;
+	/* zorgt ervoor dat gebruiker de pijltjes niet kan selecteren als tekst */
 	user-select: none;
 	-webkit-user-select: none;
 }
 
-/* Position the "next button" to the right */
+/* zet de rechterknop aan de rechterkant */
 .next {
 	right: 0;
 
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-	background-color: rgba(0, 0, 0, 0.8);
-}
-
-
-
-
 .row:after {
 	content: "";
 	display: table;
+	/* brengt border naar beneden */
 	clear: both;
 }
 
-/* Six columns side by side */
+
 .column {
 	float: left;
 	width: 25%;
 }
 
-/* Add a transparency effect for thumnbail images */
 .demo {
 	opacity: 0.6;
 }

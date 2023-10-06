@@ -109,7 +109,6 @@ header nav ul li {
 header nav ul a {
   color: whitesmoke;
   text-decoration: none;
-  background-color: var(--color-background-blue);
   padding: 0;
   width: 3em;
 }
@@ -125,8 +124,6 @@ header a img {
   position: relative;
 }
 
-
-
 h1 {
   padding: 0;
   margin: 0;
@@ -137,8 +134,6 @@ h1 {
   all: unset;
   justify-self: start;
   margin-left: 1em;
-
-
 }
 
 header button img {
@@ -198,7 +193,6 @@ header button img {
   display: inline-flex;
   flex-direction: row;
   justify-content: space-between;
-
   align-items: center;
 }
 
@@ -491,12 +485,12 @@ video {
   top: 140%;
   background-color: #152330;
   width: auto;
-  padding: 16px;
-  margin-top: -50px;
+  padding: 1em;
+  margin-top: -3.125em;
   color: white;
   font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
+  font-size: 1.25em;
+  border-radius: 0 0.1875em 0.1875em 0;
   user-select: none;
   -webkit-user-select: none;
   margin-right: 0.6em;
