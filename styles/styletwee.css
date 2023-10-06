@@ -213,6 +213,34 @@ header button img {
   li:nth-of-type(7) {
     margin-left: 0;
   }
+
+  .download-button {
+    position: absolute;
+    right: 62em;
+    top: 86em;
+  
+    display: inline-block;
+    margin-left: 10em;
+    padding: 0.8em 1.3em;
+    background-color: #85ca27;
+    color: #fff;
+    border: solid 0.35em black;
+  
+    text-decoration: none;
+    border-radius: 0.3em;
+    font-size: 0.8em;
+    transition: background-color 0.3s ease;
+  }
+
+  
+footer {
+	background-color: var(--color-background);
+  position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    clear: both;
+}
 }
 
 
@@ -299,6 +327,7 @@ video {
   order: 2;
   display: inline-block;
   margin-top: 5.85em;
+  margin-bottom: 20em;
   padding: 0;
   height: 31em;
   background-color: #152330;
@@ -575,7 +604,12 @@ hr {
 
 footer {
 	background-color: var(--color-background);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    clear: both;
 }
+
 
 footer section p {
 	padding: 2em;
@@ -588,3 +622,4 @@ footer a {
 	margin-left: 2em;
 	font-size: 0.6em;
 }
+

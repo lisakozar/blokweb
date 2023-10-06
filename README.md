@@ -163,25 +163,24 @@ Voor de basis html van de home pagina heb ik gekeken naar de breakdownschets en 
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Mijn website bestond nog steeds uit de eerste pagina. Ik heb toen wat dingen getweaked zodat het foutloos was. In deze week probeerde ik ook verder te gaan met mijn tweede pagina. Tijdens de meeting heb ik nog wat vragen gesteld over displays. Ik had wat moeite met de responsiveness en media query's maar verder ervaarde ik niet hele grote fouten.
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
   
-  Lisa:
-  Thijs: 
-  Dylan: 
-  Elton: 
+  Lisa: Hoe kan ik de layout van mijn tweede pagina er zo uit laten zien? hoe kan ik dit met een grid en fractions doen. 
+  Thijs: Algemene vragen
+  Dylan: Geen vragen (volgens mij)
+  Elton: Vragen over de navigatie
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Ik kreeg wat tips om dingen te veranderen
+  - Ik kreeg de tip om grids te gebruiken
+  - Ik kwam erachter dat ik fractions kan gebruiken voor de layout 
 
 </details>
 
@@ -195,19 +194,22 @@ Voor de basis html van de home pagina heb ik gekeken naar de breakdownschets en 
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="images\finalresult.png" width="375px">
+
+  <img src="images\finalresult2.png" width="375px">
+
+
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  Eigenlijk heb ik ontzetten veel geleerd tijdens het namaken van deze website. De belangrijkste dingen die ik heb geleerd zijn denk ik het werken met een grid systeem, layouts kunnen namaken van een site, een slideshow en de algemene kennis die ik heb opgedaan over coderen vergeleken met vorig jaar
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px">
+  <img src="images\finalresult.png" width="375px">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  Ik wilde ook nog dingen uit de surface laag proberen toe te voegen maar dit is me uiteindelijk niet gelukt. Daarom heb ik geprobeerd om het responsive te maken voor zover dit kon. Hier had ik alsnog erg veel moeite mee en ik wou dat ik dit beter had afgerond. Verder heb ik de site op de homepagina aangepast maar eigenlijk had ik het toch wel leuk gevonden als ik het direct kon namaken. Het scheelt dat ik een lastige site heb uitgekozen maar toch ben ik blij hetgene dat ik kon doen en wat ik gedaan heb. 
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px">
 </details>
 
 
