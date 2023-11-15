@@ -1,216 +1,89 @@
-/**************/
-/* CSS REMEDY */
-/**************/
-*,
-*::after,
-*::before {
-	box-sizing: border-box;
-}
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
-:root {
-	/* startje */
-	--color-text: #fff;
-	--color-background: #171d25;
-	--color-background-blue: #5f849a;
-}
-
-/****************/
-/* JOUW STYLING */
-/****************/
-@font-face {
-	font-family: 'Steamfont';
-	src: url('../fonts/MotivaSans-Regular.ttf') format('truetype');
-	font-weight: normal;
-}
-
-html {
-	font-family: 'Steamfont';
-}
-
-header {
-	position: sticky;
-	top: 0em;
-	width: 100%;
-	height: 6em;
-	background-color: var(--color-background);
-	/* zorgt ervoor dat het voor andere elementen staat */
-	z-index: 100; 
-	text-align: center;
-	display: grid;
-	grid-template-columns: 1fr min-content 1fr;
-	align-items: center;
-}
-
-header nav {
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	translate: -100% 0%;
-	transition: .5s;
-	background-color: var(--color-background);
-	padding: 0;
-	margin: 0;
-}
-
-header nav.open {
-	translate: 0% 0%;
-	background-color: var(--color-background);
-	list-style-type: none;
-}
-
-header nav ul {
-	list-style-type: none;
-	text-decoration: none;
-	text-align: left;
-	padding: 0;
-	width: 100%;
-
-}
-
-header nav ul li {
-	padding: 0.5em;
-	width: auto;
-}
-
-header nav ul a {
-	color: whitesmoke;
-	text-decoration: none;
-	padding: 0;
-	width: 3em;
-}
-
-header a img {
-	/* https://stackoverflow.com/questions/38488069/how-can-i-move-display-inline-block-to-the-right */
-	width: 9em;
-	display: flex;
-	position: relative;
-
-}
-/* zodat het niet te zien is */
-h1 {
-	display: none;
-}
-
-#hamburger {
-	all: unset;
-	justify-self: start;
-	margin-left: 1em;
-  
-  
-  }
-  
-  header button img {
-	max-width: 2em;
-	height: auto;
-	display: inline;
-	position: relative;
-  }
-  
-  .mainnavigation li a {
+.mainnavigation li a {
 	width: 100%;
 	height: auto;
-	padding: 0.3em;
 	display: flex;
 	left: 0;
 	right: 0;
-	margin: 0;
-  
-  
-  }
-  
-  .mainnavigation button {
-	background: transparent;
-	float: right;
-	margin-bottom: 1em;
-  }  
+	padding: 0.3em 0 0.3em 0;
+	
+	margin-left: 0;
+		font-size: 1.5em;
 
-.tweedenavigatie {
+
+}
+
+.mainnavigation button {
+	background: transparent;
+	margin-bottom: 1em;
+}
+
+main section:nth-of-type(1) ul:nth-of-type(1){
+	display: inline-block;
+	width: 100%;
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+	font-family: 'Steamfont';
 	font-weight: normal;
 	background-image: linear-gradient(to right, #406494, #346ca0, #244c88, #182474);
 	text-align: left;
 	margin-top: 2em;
 	margin-bottom: 2em;
+}
+
+main section:nth-child(1) ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	font-family: 'Steamfont';
+	font-weight: normal;
+	background-image: linear-gradient(to right, #406494, #346ca0, #244c88, #182474);
+	text-align: left;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+@media screen and (max-width: 600px) {
+	main section:nth-of-type(2) a:nth-of-type(1) img {
+		display: none;
+	}
+
+	main section:nth-of-type(2) a:nth-of-type(2) img {
+		display: block;
+		width: 100%;
+	}
+
+	main section:nth-of-type(1) li{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+	li:nth-of-type(7) {
+		margin-left: 0;
+	}
+
+	main section:nth-of-type(1) li{
+		display: flex;
+		flex-direction: row;
+		margin-left: 6.7em;
+		margin-right: 6.7em;
+	}
+
 
 }
 
-.tweedenavigatie li a {
-	display: inline-block;
-	width: 100%;
-	font-size: 0.8em;
-	color: var(--color-text);
-	text-decoration: none;
-	text-align: center;
-	padding: 0.8em;
-	gap: 0.3em;
-	font-weight: bold;
-	text-shadow: 0.063em 0.063em 0.063em black;
-	padding-left: 1em;
-}
-
-.tweedenavigatie li {
+main section:nth-of-type(1) li{
 	display: inline-flex;
 	flex-direction: row;
 	justify-content: space-between;
+
 	align-items: center;
 }
 
 
-@media screen and (max-width: 600px) {
-	.tweedenavigatie li {
-		display: flex;
-		width: 100%;
-		background-image: linear-gradient(to right, #406494, #346ca0, #244c88, #182474);
-		justify-content: center;
-		font-family: 'Motiva';
-		color: var(--color-text);
-		text-decoration: none;
-		text-align: left;
-		padding: 0.6em;}
 
-		.salebanners {
-			flex-direction: column;
-			/* zet ze onder elkaar */
-			align-items: center;
-			/* centered het in het midden */
-		}
-	}
-
-
-
-/* tablet style (768px tot 1024px) */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-	header {
-		height: 4em;
-	}
-
-	body {
-		max-width: 50em;
-
-	}
-
-	header a img {
-		width: 7em;
-	}
-
-	header nav ul li {
-		font-size: 1.2em;
-
-		padding: 0.3em;
-
-	}
-
-	.salebanners img {
-		max-width: none;
-	}
-
-}
 
 
 form input[type="search"] {
@@ -225,16 +98,14 @@ form input[type="search"] {
 
 }
 
-ul li form button {
+ul:nth-child(2) form button {
 	height: 2em;
 	width: 2em;
 	border-radius: 0.3em;
 	background-color: lightblue;
 }
-/* search button */
-li:nth-of-type(7) {
-	margin-left: 11.5em;
-}
+
+
 
 form button {
 	width: 2.5em;
@@ -246,52 +117,62 @@ form button {
 	margin: 0;
 }
 
+body {
+	max-width: 60em;
+	margin: 0 auto;
+	color: var(--color-text);
+	background-color: #202c3c;
+	/*margin: 0 10em 0 10em;*/
+}
 
-
-.steamthumbnail1 {
+main section:nth-of-type(2) a:nth-of-type(1) img{
 	display: block;
 	width: 100%;
 }
 
 
-.steamthumbnail2 {
+main section:nth-of-type(2) a:nth-of-type(2) img {
 	display: none;
 }
 
-@media screen and (max-width: 600px) {
-	.steamthumbnail1 {
-		display: none;
-	}
 
-	.steamthumbnail2 {
-		display: block;
-		width: 100%;
-	}
 
-	li:nth-of-type(7) {
-		margin-left: 0;
-	}
 
-	.salebanners {
-		flex-direction: column;
-		/* Stack images vertically */
-		align-items: center;
-		/* Center images horizontally */
-	}
-
-	.salebanners img {
-		max-width: none;
-	}
+h2{
+	font-size: 0.9em;
+  text-transform: uppercase;
+  position: relative;
 }
 
-
-h2 {
+main section:nth-of-type(1) h2 {
 	font-size: 0.9em;
 	text-transform: uppercase;
 	position: relative;
+	left: -9999999em;
+	position:  fixed;
 }
 
-ul.gamecards {
+main section:nth-of-type(2) h2 {
+	font-size: 0.9em;
+	text-transform: uppercase;
+	position: relative;
+	left: -9999999em;
+	position:  fixed;
+}
+
+
+main section:nth-of-type(4) h2 {
+	font-size: 0.9em;
+	text-transform: uppercase;
+	position: relative;
+	left: -9999999em;
+	position:  fixed;
+}
+
+
+
+
+main ul {
 	padding: 0;
 	display: flex;
 	scroll-snap-type: x mandatory;
@@ -302,33 +183,33 @@ ul.gamecards {
 	gap: 1em;
 }
 
-ul.gamecards li a {
+main ul li a {
 	text-decoration: none;
 	color: var(--color-text);
 }
+	
+	main ul li a:focus{
+		outline: 0.438em solid pink;
+	}
 
-.gamecards li a:focus {
-	outline: 0.438em solid pink;
-}
+	li a:focus {
+		outline: 0.438em solid pink;
+	  }
 
-li a:focus {
-	outline: 0.438em solid pink;
-}
+	  a:focus {
+		outline: 0.438em solid pink;
+	  }
 
-a:focus {
-	outline: 0.438em solid pink;
-}
+	  form input[type="search"]:focus {
+		outline: 0.438em solid pink;
+	  }
 
-form input[type="search"]:focus {
-	outline: 0.438em solid pink;
-}
+	  ul li form button:focus {
+		outline: 0.438em solid pink;
+	  
+	  }
 
-ul li form button:focus {
-	outline: 0.438em solid pink;
-
-}
-
-ul.gamecards figure {
+main ul figure {
 	background-image: linear-gradient(#0c1721 70%, #1b3147);
 	width: 24em;
 	height: auto;
@@ -341,27 +222,29 @@ li img {
 	max-height: auto;
 }
 
-.specialoffer .gamecards li figure {
-	background-image: linear-gradient(#217399, #1c658b);
-	width: 19em;
-	height: 24em;
+main section:nth-of-type(5) ul li figure {
+	background-image: linear-gradient(#09445f, #08608f);
+	width: 17.5em;
+	height: 23em;
 	box-shadow: 0.05em 0.05em 0.1em black;
 	scroll-snap-type: x mandatory;
 	justify-content: flex-start;
+	
 }
 
-.specialoffer li figure img {
-	width: 19em;
+main section:nth-of-type(5) ul li figure img {
+	width: 100%;
 	height: 18em;
 }
 
 
-.yourdiscoveryqueue a:focus {
-	outline: 0.438em solid pink;
-}
 
 
-h3 {
+
+
+	
+
+ul li a figure figcaption p:nth-child(1) {
 	color: var(--color-text);
 	text-decoration: none;
 	font-size: 1.2em;
@@ -371,52 +254,27 @@ h3 {
 
 }
 
-h4 {
+ul li a figure figcaption p:nth-child(2){
 	color: (var(--color-text));
 	text-decoration: none;
 	font-size: 0.7em;
 	margin-top: 0.1em;
 	padding: 0.3em;
 	margin-left: 0.7em;
-	margin-bottom: 0.3em;
 
 }
 
-.specialoffer h4{
-	color: (var(--color-text));
-	text-decoration: none;
-	font-size: 0.7em;
-	margin-top: 0.1em;
-	padding: 0.3em;
-	margin-left: 0.7em;
-	background-color: #5f849a;
-	width: 4.5em;
-
-}
-
-
-
-.salebanners {
+main section:nth-of-type(4){
 	display: flex;
+	width: 100%;
 	height: auto;
 	justify-content: center;
 	align-items: center;
+	padding: 0;
+	margin: 0;
 	gap: 2em;
 }
 
-.salebanners img {
-	max-width: 100%;
-	/* Make the images scale to fit their parent container */
-	height: auto;
-	/* Maintain the images' aspect ratio */
-}
-
-
-
-
-.salebanners a:focus {
-	outline: 0.438em solid pink;
-}
 
 
 /* jouw code */
@@ -425,7 +283,7 @@ figure {
 	margin: 0;
 }
 
-.categories {
+main section:nth-of-type(6) ul{
 	display: flex;
 	scroll-snap-type: x mandatory;
 	overflow-x: scroll;
@@ -436,27 +294,27 @@ figure {
 	gap: 1.25em;
 }
 
-.categories li {
+main section:nth-of-type(6) ul li {
 	scroll-snap-align: center;
 }
 
 
-.categories img {
+main section:nth-of-type(6) img {
 	max-width: 18em;
 	display: block;
 }
 
 
-.categories li a:hover {
+main section:nth-of-type(6) ul li a:hover{
 	opacity: 0.8;
 	transition: 0.3s;
-}
+	}
+	
+	main section:nth-of-type(6) ul li a:focus{
+		outline: 0.438em solid pink;
+	}
 
-.categories li a:focus {
-	outline: 0.438em solid pink;
-}
-
-.yourdiscoveryqueue img {
+	main section:nth-of-type(7) img {
 	display: flex;
 	width: 100%;
 	height: auto;
@@ -464,21 +322,21 @@ figure {
 	align-items: center;
 }
 
-.yourdiscoveryqueue img:hover {
-	opacity: 0.6;
-	transition: 0.3s;
+main section:nth-of-type(7) img:hover{
+opacity: 0.6;
+transition: 0.3s;
 
 }
 
-.yourdiscoveryqueue a:focus {
+main section:nth-of-type(7) a:focus{
 	outline: 0.438em solid pink;
 }
 
-.yourdiscoveryqueue {
+main section:nth-of-type(7) {
 	position: relative;
 }
 
-.yourdiscoveryqueue a:nth-child(3) {
+main section:nth-of-type(7) a:nth-child(3) {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -486,20 +344,15 @@ figure {
 	-ms-transform: translate(-50%, -50%);
 	background-color: var(--color-background-blue);
 	color: white;
-	font-size: 1em;
-	padding: 0.75em 1.5em;
+	font-size: 16px;
+	padding: 12px 24px;
 	border: none;
 	cursor: pointer;
-	border-radius: 0.3125em;
+	border-radius: 5px;
 	width: 80%;
 }
 
-.yourdiscoveryqueue a:nth-child(3):hover {
-	background-color: #08baff;
-	transition: 0.3s;
-}
-
-.browsebuttonlist {
+main section:nth-of-type(8) ul {
 	list-style-type: none;
 	display: flex;
 	flex-wrap: wrap;
@@ -508,14 +361,15 @@ figure {
 	margin: 0;
 	padding: 0;
 }
-/* het element groeit mee met de content
-Zorgt voor de grootte van een basis flex item */
-.browsebuttonlist li {
+
+
+
+main section:nth-of-type(8) ul li {
 	flex-grow: 1;
 	flex-basis: 12em;
 }
 
-.browsebuttonlist a {
+main section:nth-of-type(8) ul li a {
 	background-image: linear-gradient(#08baff, #2c74ff);
 	font-size: 1em;
 	border: none;
@@ -525,16 +379,18 @@ Zorgt voor de grootte van een basis flex item */
 	text-align: center;
 }
 
-.browsebuttonlist a:hover {
-	background-image: linear-gradient(#7bdaff, #5f86d4);
-	transition: 0.3s;
+main section:nth-of-type(8) a:hover{
+background-image: linear-gradient(#7bdaff, #5f86d4);
+transition: 0.3s;
 }
 
-.browsebuttonlist a:focus {
+main section:nth-of-type(8) a:focus{
 	outline: 0.438em solid pink;
-}
+	}
 
-.browsebuttonlist a {
+
+
+	main section:nth-of-type(8) ul li a {
 	display: inline-block;
 	width: 100%;
 	text-decoration: none;
@@ -548,17 +404,13 @@ Zorgt voor de grootte van een basis flex item */
 }
 
 
-.curatorrecommendation figure img {
+main section:nth-of-type(9) figure a img {
 	float: left;
-	width: 35em;
+	width: 50%;
+	margin-right: 1em;
 }
 
-.curatorrecommendation figcaption img{
-	width: 5em;
-	padding: 0.2em;
-}
-
-.curatorrecommendation figure {
+main section:nth-of-type(9) figure {
 	background-image: linear-gradient(#0c1721 70%, #1b3147);
 	width: 100%;
 	height: auto;
@@ -567,8 +419,14 @@ Zorgt voor de grootte van een basis flex item */
 	margin-bottom: 2em;
 }
 
-.curatorrecommendation p {
+main section:nth-of-type(9) figcaption p {
 	font-style: italic;
+	padding: 0.2em;
+}
+
+main section:nth-of-type(9) figcaption img{
+width: 5em;
+  padding: 0.2em;
 }
 
 
@@ -587,103 +445,23 @@ footer section p {
 }
 
 a:active {
-	color: pink;
+	color: red;
 }
 
 
 
-
-.dark {
-	background-color: white;
-	color: black;
-}
-
-/*vragen*
-1. Hamburger menu 
-2. Hoe maak ik de nav bar responsive
-3. Menu aan de linkerkant
-4. positioneren van detailpagina
-(width > 40em)/
-
-
-
-
-/* Position the image container (needed to position the left and right arrows) */
-.container {
-	position: relative;
-}
-
-.row {
-	list-style-type: none;
-}
-
-.container .mySlides video {
-	width: 37.5em;
-}
-
-.container .mySlides img {
-	width: 37.5em;
-}
-
-/* Verstopt de plaatjes */
-.mySlides {
-	display: none;
-}
-
-.cursor {
-	cursor: pointer;
-}
-
-/* volgende en terug knopjes*/
-.prev,
-.next {
-	cursor: pointer;
-	position: absolute;
-	top: 70%;
-	width: auto;
-	padding: 1em;
-	margin-top: -3.125em;
-	color: white;
-	font-weight: bold;
-	font-size: 1.25em;
-	border-radius: 0 0.1875em 0.1875em 0;
-	/* zorgt ervoor dat gebruiker de pijltjes niet kan selecteren als tekst */
-	user-select: none;
-	-webkit-user-select: none;
-}
-
-/* zet de rechterknop aan de rechterkant */
-.next {
-	right: 0;
-
-}
-
-.row:after {
-	content: "";
-	display: table;
-	/* brengt border naar beneden */
-	clear: both;
-}
-
-
-.column {
-	float: left;
-	width: 25%;
-}
-
-.demo {
-	opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-	opacity: 1;
-}
-
-footer a {
+footer a{
 	text-decoration: none;
 	color: var(--color-text);
 	display: inline-block;
 	margin-left: 2em;
 	font-size: 0.6em;
+}
+
+footer h2 {
+	font-size: 0.9em;
+	text-transform: uppercase;
+	position: relative;
+	left: -9999999em;
+	position:  fixed;
 }

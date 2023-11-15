@@ -1,6 +1,262 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+	--color-text: #fff;
+	--color-background: #171d25;
+	--color-background-blue: #5f849a;
+}
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+@font-face {
+	font-family: 'Steamfont';
+	src: url('../fonts/MotivaSans-Regular.ttf') format('truetype');
+	font-weight: normal;
+}
+
+html {
+	font-family: 'Steamfont';
+}
+
+header {
+	position: sticky;
+	top: 0em;
+	width: 100%;
+	height: 6em;
+	background-color: var(--color-background);
+	z-index: 100;
+	text-align: center;
+	display: grid;
+	grid-template-columns: 1fr min-content 1fr;
+	align-items: center;
+}
+
+header nav {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	translate: -100% 0%;
+	transition: .5s;
+	background-color: var(--color-background);
+	padding: 0;
+	margin: 0;
+}
+
+header nav.open {
+	translate: 0% 0%;
+	background-color: var(--color-background);
+	list-style-type: none;
+}
+
+header nav ul {
+	list-style-type: none;
+	text-decoration: none;
+	text-align: left;
+	padding: 0;
+	width: 100%;
+
+
+}
+
+header nav ul li {
+	padding: 0.5em;
+	width: auto;
+}
+
+header nav ul a {
+	color: whitesmoke;
+	text-decoration: none;
+	
+	width: 100%;
+}
+
+
+
+header a img {
+	/* https://stackoverflow.com/questions/38488069/how-can-i-move-display-inline-block-to-the-right */
+	width: 9em;
+	display: flex;
+	position: relative;
+
+}
+
+
+
+
+h1 {
+	font-size: 0.9em;
+	text-transform: uppercase;
+	position: relative;
+	left: -9999999em;
+	position:  fixed;
+}
+
+#hamburger {
+	all: unset;
+	justify-self: start;
+	margin-left: 1em;
+
+
+}
+
+header button img {
+	max-width: 2em;
+	height: auto;
+	display: inline;
+	position: relative;
+}
+
+.mainnavigation li a {
+	width: 100%;
+	height: auto;
+	display: flex;
+	left: 0;
+	right: 0;
+	padding: 0.3em 0 0.3em 0;
+	
+	margin-left: 0;
+		font-size: 1.5em;
+
+
+}
+
+.mainnavigation button {
+	background: transparent;
+	margin-bottom: 1em;
+}
+
+
+
+main section:nth-of-type(1) li a {
+	display: inline-block;
+	width: 100%;
+	font-family: 'Steamfont';
+	font-size: 0.8em;
+	color: var(--color-text);
+	text-decoration: none;
+	text-align: center;
+	padding: 0.8em;
+	gap: 0.3em;
+	font-weight: bold;
+	text-shadow: 0.063em 0.063em 0.063em black;
+	padding-left: 1em;
+}
+
+main section:nth-of-type(1) li{
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	align-items: center;
+}
+
+
+@media screen and (max-width: 600px) {
+	main section:nth-of-type(2) a:nth-of-type(1) img {
+		display: none;
+	}
+
+	main section:nth-of-type(2) a:nth-of-type(2) img {
+		display: block;
+		width: 100%;
+	}
+
+	li:nth-of-type(7) {
+		margin-left: 0;
+	}
+
+
+}
+
+
+
+
+
+form input[type="search"] {
+	text-align: left;
+	background-color: #316282;
+	border-color: black;
+	border-radius: 0.3em;
+	font-size: 0.9em;
+	padding: 0.2em;
+	padding-left: 1em;
+	gap: 2em;
+
+}
+
+ul:nth-child(2) form button {
+	height: 2em;
+	width: 2em;
+	border-radius: 0.3em;
+	background-color: lightblue;
+}
+
+
+
+form button {
+	width: 2.5em;
+	height: 2.5em;
+	position: relative;
+	float: right;
+	border-color: black;
+	padding: 0;
+	margin: 0;
+}
+
 body {
 	max-width: 60em;
 	margin: 0 auto;
 	color: var(--color-text);
 	background-color: #202c3c;
+	/*margin: 0 10em 0 10em;*/
 }
+
+main section:nth-of-type(2) a:nth-of-type(1) img{
+	display: block;
+	width: 100%;
+}
+
+
+main section:nth-of-type(2) a:nth-of-type(2) img {
+	display: none;
+}
+
+
+
+footer {
+	background-color: var(--color-background);
+}
+
+footer section p {
+	padding: 2em;
+	margin-top: 5em;
+}
+
+footer a{
+	text-decoration: none;
+	color: var(--color-text);
+	display: inline-block;
+	margin-left: 2em;
+	font-size: 0.6em;
+}
+
+

@@ -7,9 +7,70 @@
   box-sizing: border-box;
 }
 
+main section:nth-child(1) ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	font-family: 'Steamfont';
+	font-weight: normal;
+	background-image: linear-gradient(to right, #406494, #346ca0, #244c88, #182474);
+	text-align: left;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+main section:nth-child(1) ul a {
+	display: inline-block;
+	width: 100%;
+	font-family: 'Steamfont';
+	font-size: 0.8em;
+	color: var(--color-text);
+	text-decoration: none;
+	text-align: center;
+	padding: 0.8em;
+	gap: 0.3em;
+	font-weight: bold;
+	text-shadow: 0.063em 0.063em 0.063em black;
+	padding-left: 1em;
+}
 
 
+@media screen and (max-width: 600px) {
+	main section:nth-of-type(2) a:nth-of-type(1) img {
+		display: none;
+	}
 
+	main section:nth-of-type(2) a:nth-of-type(2) img {
+		display: block;
+		width: 100%;
+	}
+
+	li:nth-of-type(7) {
+		margin-left: 0;
+	}
+
+  main section:nth-of-type(1) li{
+		display: flex;
+		flex-direction: row;
+		margin-left: 6.7em;
+		margin-right: 6.7em;
+	}
+
+  .griditem1 {
+   max-width: 28em;
+  }
+
+  .griditem2{
+    max-width: 28em;
+  }
+
+  .download-button {
+    position: absolute;
+    top: 20em;
+    left: -70em;
+  }
+
+}
 
 
 /*********************/
@@ -51,15 +112,14 @@ a:focus {
 }
 
 a:hover {
-  background-color: pink;
-  transition: 0.3s;
-}
+	background-color: pink;
+	transition: 0.3s;
+} 
 
 li a:hover {
-  background-color: pink;
-  transition: 0.3s;
+	background-color: pink;
+	transition: 0.3s;
 }
-
 header {
   position: sticky;
   top: 0em;
@@ -109,6 +169,7 @@ header nav ul li {
 header nav ul a {
   color: whitesmoke;
   text-decoration: none;
+  background-color: var(--color-background-blue);
   padding: 0;
   width: 3em;
 }
@@ -122,7 +183,10 @@ header a img {
   width: 9em;
   display: flex;
   position: relative;
+
 }
+
+
 
 h1 {
   padding: 0;
@@ -134,6 +198,8 @@ h1 {
   all: unset;
   justify-self: start;
   margin-left: 1em;
+
+
 }
 
 header button img {
@@ -161,87 +227,8 @@ header button img {
   margin-bottom: 1em;
 }
 
-.tweedenavigatie {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  font-family: 'Steamfont';
-  font-weight: normal;
-  background-image: linear-gradient(to right, #406494, #346ca0, #244c88, #182474);
-  text-align: left;
-  margin-top: 2em;
-  margin-bottom: 2em;
-
-}
-
-.tweedenavigatie li a {
-  display: inline-block;
-  width: 100%;
-  font-family: 'Steamfont';
-  font-size: 0.8em;
-  color: var(--color-text);
-  text-decoration: none;
-  text-align: center;
-  padding: 0.8em;
-  gap: 0.3em;
-  font-weight: bold;
-  text-shadow: 0.063em 0.063em 0.063em black;
-  padding-left: 1em;
-}
-
-.tweedenavigatie li {
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
 
 
-@media screen and (max-width: 600px) {
-  .tweedenavigatie li {
-    display: flex;
-    width: 100%;
-    background-image: linear-gradient(to right, #406494, #346ca0, #244c88, #182474);
-    justify-content: center;
-    font-family: 'Motiva';
-    color: var(--color-text);
-    text-decoration: none;
-    text-align: left;
-    padding: 0.6em;
-  }
-
-  li:nth-of-type(7) {
-    margin-left: 0;
-  }
-
-  .download-button {
-    position: absolute;
-    right: 62em;
-    top: 86em;
-  
-    display: inline-block;
-    margin-left: 10em;
-    padding: 0.8em 1.3em;
-    background-color: #85ca27;
-    color: #fff;
-    border: solid 0.35em black;
-  
-    text-decoration: none;
-    border-radius: 0.3em;
-    font-size: 0.8em;
-    transition: background-color 0.3s ease;
-  }
-
-  
-footer {
-	background-color: var(--color-background);
-  position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    clear: both;
-}
-}
 
 
 form input[type="search"] {
@@ -271,11 +258,6 @@ ul li form button:focus {
 
 }
 
-.tweedenavigatie form button img {
-  max-width: 1.5em;
-  /* Adjust the size as needed */
-  height: auto;
-}
 
 li:nth-of-type(7) {
   margin-left: 10.5em;
@@ -307,35 +289,30 @@ body {
 
 @media screen and (max-width: 600px) {
   .container1 {
-    grid-template-columns: 1fr;
-    /* Single column layout for small screens */
+    grid-template-columns: 1fr; /* Single column layout for small screens */
+  }}
+
+  img, video {
+    max-width: 100%;
+    height: auto;
   }
-}
 
-img,
-video {
-  max-width: 100%;
-  height: auto;
-}
-
-
-
+  
+  
 
 
 
 .griditem1 {
   order: 2;
   display: inline-block;
-  margin-top: 5.85em;
-  margin-bottom: 20em;
+  margin-top: 2.5em;
   padding: 0;
   height: 31em;
-  background-color: #152330;
+  background-color:#152330 ;
 }
 
 .griditem2 {
   order: 1;
-  margin: 0;
   list-style-type: none;
 }
 
@@ -387,8 +364,15 @@ p {
   font-size: 0.8em;
 }
 
+h2:nth-of-type(1){
+  font-size: 0.9em;
+	text-transform: uppercase;
+	position: relative;
+	left: -9999999em;
+	position:  fixed;
+}
 
-h2:nth-of-type(1) {
+h2:nth-of-type(2){
   font-size: 1.2em;
   background-color: #456a27;
   color: white;
@@ -396,15 +380,13 @@ h2:nth-of-type(1) {
   border-radius: 0.1em;
   position: relative;
 }
-
 h2 {
   text-transform: uppercase;
   color: #87949d;
   font-size: 0.8em;
 
 }
-
-h3 {
+h3{
   text-align: left;
   text-transform: uppercase;
   font-size: 0.7em;
@@ -415,9 +397,9 @@ h3 {
   margin-top: 0.5em;
 }
 
-p {
-  padding: 0;
-  margin: 0;
+p{
+padding: 0;
+margin: 0;
 }
 
 .tagbuttons {
@@ -430,7 +412,6 @@ p {
 }
 
 .tagbuttons a {
-  background-color: #1b2838;
   font-size: 0.8em;
   border: none;
   border-radius: 0.2em;
@@ -514,12 +495,12 @@ video {
   top: 140%;
   background-color: #152330;
   width: auto;
-  padding: 1em;
-  margin-top: -3.125em;
+  padding: 16px;
+  margin-top: -50px;
   color: white;
   font-weight: bold;
-  font-size: 1.25em;
-  border-radius: 0 0.1875em 0.1875em 0;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
   user-select: none;
   -webkit-user-select: none;
   margin-right: 0.6em;
@@ -555,10 +536,9 @@ video {
   width: 25%;
 }
 
-.column img {
+.column img{
   width: 100%;
 }
-
 /* Add a transparency effect for thumnbail images */
 .demo {
   opacity: 0.6;
@@ -580,12 +560,12 @@ hr {
 
 /* Style for the download button */
 .download-button {
-  position: absolute;
-  right: 62em;
-  top: 86em;
-
+  position:absolute;
+  right: 31m;
+  top: 60em;
+z-index: 1;
   display: inline-block;
-  margin-left: 45em;
+  margin-left: 38em;
   padding: 0.8em 1.3em;
   background-color: #85ca27;
   color: #fff;
@@ -602,24 +582,42 @@ hr {
   background-color: #c4fd73;
 }
 
-footer {
-	background-color: var(--color-background);
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    clear: both;
+
+
+
+
+
+.griditem2 > ul {
+padding: 0;
+	list-style:none;
+	
+	display:flex;
+	overflow:hidden;
 }
 
 
-footer section p {
-	padding: 2em;
+.griditem2 > ul li {
+	flex-shrink: 0;
 }
 
-footer a {
-	text-decoration: none;
-	color: var(--color-text);
-	display: inline-block;
-	margin-left: 2em;
-	font-size: 0.6em;
+.griditem2 > ul li img {
+	width:100%;
+	display:block;
 }
 
+.griditem2 nav ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+	
+	display:flex;
+}
+
+.griditem2 nav ul li {
+	flex-grow:1;
+}
+
+.griditem2 nav ul li img {
+	width:100%;
+	display:block;
+}

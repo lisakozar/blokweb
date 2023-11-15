@@ -8,43 +8,40 @@
 
 
 	<title>Resident Evil 4</title>
-
-	<link href="styles\algemenestijl.css" rel="stylesheet">
-
 	<link href="./styles/styletwee.css" rel="stylesheet">
+<link href="styles/algemenestijl.css" rel="stylesheet">
+	
 
-	<link rel="icon" type="image/x-icon" href="./images\steamfavicon.png">
 
-	<script defer src="scripts/script.js"></script>
+	<link rel="icon" type="image/x-icon" href="./images/steamfavicon.png">
 </head>
-
+<body>
 <header>
-	<button id="hamburger" aria-label="menu"><img src="images\hamburger.png" alt="hamburgericoon"></button>
+	<h1>Steam homepagina</h1>
+	<button id="hamburger" aria-label="menu"><img src="images/hamburger.png" alt="hamburger"></button>
 	<nav>
-		<button id="close"><img src="images\kruisje.png" aria-label="Close menu" alt="close menu button"></button>
+		<button id="close"><img src="images/kruisje.png" alt="close menu button" aria-label="Close menu"> </button>
 		<ul>
-			<section class="mainnavigation">
-				<li></li>
-				<li><a href="">Notifications</a></li>
-				<li><a href="">Store</a></li>
-				<li><a href="">Community</a></li>
-				<li><a href="">You & Friends</a></li>
-				<li><a href="">Support</a></li>
-			</section>
+			<li><a href="">Notifications</a></li>
+			<li><a href="">Store</a></li>
+			<li><a href="">Community</a></li>
+			<li><a href="">You & Friends</a></li>
+			<li><a href="">Support</a></li>
 			<li><a href="">Account details</a></li>
 			<li><a href="">Store preferences</a></li>
 			<li><a href="">Change language</a></li>
 			<li><a href="">Change User</a></li>
 			<li><a href="">View desktop website</a></li>
 		</ul>
-
 	</nav>
-	<a href="index.html"><img src="./images/steamlogo.png" alt="steam homepagina"></a>
+	<a href="index.html"><img src="./images/steamlogo.png" aria-label="Steam homepage" alt="steam homepagina"></a>
 </header>
 
-<body>
-
-	<ul class="tweedenavigatie">
+<main>
+	<section> 
+		<!-- SECTION 1 -->
+		<h2>Smaller navigation</h2>
+	<ul>
 		<li><a href="index.html">Your store</a></li>
 		<li><a href="index.html">New & Noteworthy</a></li>
 		<li><a href="index.html">Categories</a></li>
@@ -55,35 +52,30 @@
 			<form id="form" class="search">
 				<input type="search" aria-label="search" placeholder="Search">
 				<button>
-					<img src="./images/searchicon.png" alt="search icon">
+					<img src="images/searchicon.png" alt="search icon">
 				</button>
 			</form>
 		</li>
 	</ul>
-<!-- Container voor het gridsysteem. griditem1 staat aan de rechterkant en griditem 2 staat aan de linkerkant -->
-	<div class="container1">
+</section>
 
+	<div class="container1">
 		<section class="griditem1">
 			<figure>
-				<img id='rethumbnail' src="./images\RESIDENTEVIL.jpg" alt="Resident evil 4 thumbnail">
+				<img src="./images/RESIDENTEVIL.jpg" alt="Resident evil 4 thumbnail">
 				<figcaption>Survival is just the beginning. Six years have passed since the biological disaster in
 					Raccoon City. Leon S. Kennedy, one of the survivors, tracks the president's kidnapped daughter to a
 					secluded European village, where there is something terribly wrong with the locals. </figcaption>
 			</figure>
-			<h3>Recent Reviews:</h3>
-			<p><a href="#">Overwhelmingly Positive</a> (97% of 57,397) all time</p>
-			<h3>All Reviews:</h3>
-			<p><a href="#">Overwhelmingly Positive</a> (97% of 2,609) recent</p>
-			<h3>Release date</h3>
-			<p>Released 24 Mar, 2023</p>
-			<h3>Developer</h3>
-			<p><a href="#"> Capcom Co., Ltd.</a></p>
-			<h3>Publisher</h3>
-			<p><a href="#"> Capcom Co., Ltd.</a></p>
-
+			<h3>Recent Reviews:</h3> <p><a href="#">Overwhelmingly Positive</a> (97% of 57,397) all time</p>
+			<h3>All Reviews:</h3> <p><a href="#">Overwhelmingly Positive</a> (97% of 2,609) recent</p>
+			<h3>Release date</h3> <p>Released 24 Mar, 2023</p>
+			<h3>Developer</h3> <p><a href="#"> Capcom Co., Ltd.</a></p>
+			<h3>Publisher</h3> <p><a href="#"> Capcom Co., Ltd.</a></p>
+		
 
 			<p>Popular user-defined tags for this product:</p>
-			<ul class="tagbuttons">
+			<ul>
 				<li><a href="#">Action</a></li>
 				<li><a href="#">Horror</a></li>
 				<li><a href="#">Survival Horror</a></li>
@@ -93,140 +85,108 @@
 		</section>
 
 		<section class="griditem2">
+			<h2>Resident evil 4 information</h2>
 			<ul class="mininavigation">
 				<li><a href="">All Games ></a></li>
 				<li><a href="">Action games ></a></li>
 				<li><a href="">Resident Evil Franchise ></a></li>
 				<li><a href="">Resident Evil 4</a></li>
 			</ul>
-			<h1>Resident evil 4</h1>
-
-			<!-- container voor het carousel met de video/plaatjes  
-			https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_gallery -->
-
-			<ul class="container">
-				<li class="mySlides">
-					<video controls>
-						<source src="images\residenteviltrailer.mp4" type="video/mp4" aria-label="Resident evil 4 trailer"></video>
-				</li>
-
-				<li class="mySlides">
-					<img src="images\screenshot1.jpg" alt="Screenshot 1">
-				</li>
-
-				<li class="mySlides">
-					<img src="images\screenshot2.jpg" alt="Screenshot 2">
-				</li>
-
-				<li class="mySlides">
-					<img src="images\screenshot4.jpg" alt="Screenshot 3">
-				</li>
-
-				<!-- De volgende en terugknop -->
-
-				<a class="prev">❮</a>
-				<a class="next">❯</a>
-			</ul>
-<!-- De kleine plaatjes aan de onderkant de 'gallerij' -->
-			<ul class="row">
-				<li class="column">
-					<video class="demo cursor" src="images\residenteviltrailer.mp4"
-						alt="The Woods">
-				</li>
-				<li class="column">
-					<img class="demo cursor" src="images\screenshot1.jpg" alt="Screenshot 1">
-				</li>
-				<li class="column">
-					<img class="demo cursor" src="images\screenshot2.jpg" alt="Screenshot 2">
-				</li>
-				<li class="column">
-					<img class="demo cursor" src="images\screenshot4.jpg"  alt="Screenshot 3">
 			
-				</li>
-			</ul>
-<!-- De rechterkant van de pagina met de tekst -->
-			<section>
-				<h2> Download Resident Evil 4 Chainsaw Demo <h2>
-						<a href="#" class="download-button">Download</a>
 
-						<h2>About This Game</h2>
-						<!-- <hr> maakt een streepje -->
-						<hr> 
-						<p>
-							Survival is just the beginning.
 
-							Six years have passed since the biological disaster in Raccoon City.
-							Agent Leon S. Kennedy, one of the survivors of the incident, has been sent to rescue the
-							president's
-							kidnapped daughter.
-							He tracks her to a secluded European village, where there is something terribly wrong with
-							the locals.
-							And the curtain rises on this story of daring rescue and grueling horror where life and
-							death, terror
-							and catharsis intersect.
+			<section class="griditem2">
 
-							Featuring modernized gameplay, a reimagined storyline, and vividly detailed graphics,
-							Resident Evil 4 marks the rebirth of an industry juggernaut.
-
-							Relive the nightmare that revolutionized survival horror.
-
-							<h2>Mature Content Description</h2>
-							<hr>
-							<p>
-								The developers describe the content like this:
-
-								This Game may contain content not appropriate for all ages, or may not be appropriate
-								for viewing at
-								work: Frequent Violence or Gore, General Mature Content
-							</p>
-
-							<h2>System Requirements</h2>
-							<hr>
-							<p> Minimum:
-								Requires a 64-bit processor and operating system
-								OS: Windows 10 (64 bit)
-								Processor: AMD Ryzen 3 1200 / Intel Core i5-7500
-								Memory: 8 GB RAM
-								Graphics: AMD Radeon RX 560 with 4GB VRAM / NVIDIA GeForce GTX 1050 Ti with 4GB VRAM
-								DirectX: Version 12
-								Network: Broadband Internet connection
-								Additional Notes: Estimated performance (when set to Prioritize Performance):
-								1080p/45fps.
-								・Framerate might drop in graphics-intensive scenes. ・AMD Radeon RX 6700 XT or NVIDIA
-								GeForce RTX
-								2060 required to support ray tracing.
-
-								Recommended:
-								Requires a 64-bit processor and operating system
-								OS: Windows 10 (64 bit)/Windows 11 (64 bit)
-								Processor: AMD Ryzen 5 3600 / Intel Core i7 8700
-								Memory: 16 GB RAM
-								Graphics: AMD Radeon RX 5700 / NVIDIA GeForce GTX 1070
-								DirectX: Version 12
-								Network: Broadband Internet connection
-								Additional Notes: Estimated performance: 1080p/60fps ・Framerate might drop in
-								graphics-intensive
-								scenes. ・AMD Radeon RX 6700 XT or NVIDIA GeForce RTX 2070 required to support ray
-								tracing.
-
-								©CAPCOM CO., LTD. 2005, 2023 ALL RIGHTS RESERVED.
-							</p>
+				
+			
+				<ul>	
+					<li id="twee"><img src="images/screenshot1.jpg" alt="Resident evil screenshot 1 " /></li>
+					<li id="drie"><img src="images/screenshot2.jpg" alt="Resident evil screenshot 2" /></li>
+					<li id="vier"><img src="images/screenshot4.jpg" alt="Resident evil screenshot 3" /></li>
+		
+					
+				</ul>
+				
+				<nav>
+					<ul>
+						<li><a href="#twee"><img src="images/screenshot1.jpg" alt="Resident evil screenshot 1" /></a></li>
+						<li><a href="#drie"><img src="images/screenshot2.jpg" alt="Resident evil screenshot 2" /></a></li>
+						<li><a href="#vier"><img src="images/screenshot4.jpg" alt="Resident evil screenshot 3" /></a></li>
+					</ul>
+				</nav>
+				
 			</section>
-	</div>
 
-	<footer>
 		<section>
-			<p>© 2023 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in
-				the US and other countries.
-				VAT included in all prices where applicable. </p>
-			<a href="#">Privacy policy</a>
-			<a href="#">Legal</a>
-			<a href="#">Steam Subscriber Agreement</a>
-			<a href="#">Refunds</a>
-			<a href="#">Privacy policy</a>
-			<a href="#">Cookies</a>
+			<h2> About the game </h2>
+			<a href="#" class="download-button">Download</a>
+
+			<h2>Download Resident Evil 4 Demo</h2>
+			<hr>
+			<p>
+				Survival is just the beginning.
+
+				Six years have passed since the biological disaster in Raccoon City.
+				Agent Leon S. Kennedy, one of the survivors of the incident, has been sent to rescue the president's
+				kidnapped daughter.
+				He tracks her to a secluded European village, where there is something terribly wrong with the locals.
+				And the curtain rises on this story of daring rescue and grueling horror where life and death, terror
+				and catharsis intersect.
+
+				Featuring modernized gameplay, a reimagined storyline, and vividly detailed graphics,
+				Resident Evil 4 marks the rebirth of an industry juggernaut.
+
+				Relive the nightmare that revolutionized survival horror.
+
+				<h2>Mature Content Description</h2>
+				<hr>
+				<p>
+					The developers describe the content like this:
+
+					This Game may contain content not appropriate for all ages, or may not be appropriate for viewing at
+					work: Frequent Violence or Gore, General Mature Content
+				</p>
+
+				<h2>System Requirements</h2>
+				<hr>
+				<p> Minimum:
+					Requires a 64-bit processor and operating system
+					OS: Windows 10 (64 bit)
+					Processor: AMD Ryzen 3 1200 / Intel Core i5-7500
+					Memory: 8 GB RAM
+					Graphics: AMD Radeon RX 560 with 4GB VRAM / NVIDIA GeForce GTX 1050 Ti with 4GB VRAM
+					DirectX: Version 12
+					Network: Broadband Internet connection
+					Additional Notes: Estimated performance (when set to Prioritize Performance): 1080p/45fps.
+					・Framerate might drop in graphics-intensive scenes. ・AMD Radeon RX 6700 XT or NVIDIA GeForce RTX
+					2060 required to support ray tracing.
+
+					Recommended:
+					Requires a 64-bit processor and operating system
+					OS: Windows 10 (64 bit)/Windows 11 (64 bit)
+					Processor: AMD Ryzen 5 3600 / Intel Core i7 8700
+					Memory: 16 GB RAM
+					Graphics: AMD Radeon RX 5700 / NVIDIA GeForce GTX 1070
+					DirectX: Version 12
+					Network: Broadband Internet connection
+					Additional Notes: Estimated performance: 1080p/60fps ・Framerate might drop in graphics-intensive
+					scenes. ・AMD Radeon RX 6700 XT or NVIDIA GeForce RTX 2070 required to support ray tracing.
+
+					©CAPCOM CO., LTD. 2005, 2023 ALL RIGHTS RESERVED.
+				</p>
+			
+
+			</div>
 		</section>
-	</footer>
+	
+
+</main>
+
+<script defer src="scripts/script.js"></script>
+  
+
+
+
 </body>
 
 </html>

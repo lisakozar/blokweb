@@ -163,24 +163,25 @@ Voor de basis html van de home pagina heb ik gekeken naar de breakdownschets en 
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  Mijn website bestond nog steeds uit de eerste pagina. Ik heb toen wat dingen getweaked zodat het foutloos was. In deze week probeerde ik ook verder te gaan met mijn tweede pagina. Tijdens de meeting heb ik nog wat vragen gesteld over displays. Ik had wat moeite met de responsiveness en media query's maar verder ervaarde ik niet hele grote fouten.
+  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
   
-  Lisa: Hoe kan ik de layout van mijn tweede pagina er zo uit laten zien? hoe kan ik dit met een grid en fractions doen. 
-  Thijs: Algemene vragen
-  Dylan: Geen vragen (volgens mij)
-  Elton: Vragen over de navigatie
+  Lisa:
+  Thijs: 
+  Dylan: 
+  Elton: 
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - Ik kreeg wat tips om dingen te veranderen
-  - Ik kreeg de tip om grids te gebruiken
-  - Ik kwam erachter dat ik fractions kan gebruiken voor de layout 
+  - punt 1
+  - punt 2
+  - nog een punt
+  - ...
 
 </details>
 
@@ -194,64 +195,40 @@ Voor de basis html van de home pagina heb ik gekeken naar de breakdownschets en 
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="images\finalresult.png" width="375px">
-
-  <img src="images\finalresult2.png" width="375px">
-
-
+  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Eigenlijk heb ik ontzetten veel geleerd tijdens het namaken van deze website. De belangrijkste dingen die ik heb geleerd zijn denk ik het werken met een grid systeem, layouts kunnen namaken van een site, een slideshow en de algemene kennis die ik heb opgedaan over coderen vergeleken met vorig jaar
+  Korte omschrijving met plaatjes
 
-  <img src="images\finalresult.png" width="375px">
+  <img src="readme-images/dummy-plaatje.jpg" width="375px">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Ik wilde ook nog dingen uit de surface laag proberen toe te voegen maar dit is me uiteindelijk niet gelukt. Daarom heb ik geprobeerd om het responsive te maken voor zover dit kon. Hier had ik alsnog erg veel moeite mee en ik wou dat ik dit beter had afgerond. Verder heb ik de site op de homepagina aangepast maar eigenlijk had ik het toch wel leuk gevonden als ik het direct kon namaken. Het scheelt dat ik een lastige site heb uitgekozen maar toch ben ik blij hetgene dat ik kon doen en wat ik gedaan heb. 
+  Korte omschrijving met plaatjes
+
+  <img src="readme-images/dummy-plaatje.jpg" width="375px">
+</details>
+
+
+
+## Herkansing
+
+<details>
+  Ik heb geprobeerd om alle foutjes te fixen zodat de site dit keer wel op orde is maar ik vond dit toch heel erg lastig. Ik heb mijn best geprobeerd en de volgende dingen heb ik verbeterd:
+  - Accesibility verbeterd
+  - Headings verbeterd
+  - Sections toegevoegd/veranderd/verbeterd
+  - Errors uit code gehaald en zo semantisch correct geprobeerd te maken
+  - Het caroussel heb ik veranderd naar de versie die geen javascript nodig heeft
+  - De 'algemene stijl' css aangevuld 
+  - De header gefixed
+  - Algemene foutjes veranderd in de code 
+  Toch is het mij niet gelukt om alles te veranderen en raakte ik weer in de knoop. Hopelijk is dit goed genoeg want meer heb ik niet kunnen doen. Ik heb het mezelf eigenlijk veel te lastig gemaakt terwijl dit niet nodig was maar ik had geen energie om een nieuwe site te maken in de tijd tussen het eerste eindgesprek en de herkansing. De grootste fout die ik zelf niet heb kunnen verbeteren is het caroussel en de formatting op telefoon. 
 
 </details>
 
 
 
-
-
-## Bronnenlijst
-
-<details open>
-  <summary>continu bijhouden terwijl je werkt</summary>
-
-  1. https://stackoverflow.com/questions/18826147/javascript-audio-play-on-click
-  2. https://chat.openai.com/c/9cec7ff3-bd43-403b-a054-e83c18e3dade
-  3. https://www.w3schools.com/cssref/tryit.php?filename=trycss_text-indent
-  4. https://www.w3schools.com/cssref/pr_text_text-indent.php
-  5. https://www.reddit.com/r/learnjavascript/comments/l542ji/should_i_have_one_js_file_or_multiple_for_a/
-  6. https://nekocalc.com/px-to-em-converter
-  7. https://stackoverflow.com/questions/74254589/html-css-h3-and-p-tag-on-one-row
-  8. https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_gallery
-  9. https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp
-  10. https://www.w3schools.com/howto/howto_js_slideshow.asp
-  11. https://www.w3schools.com/css/css_background_image.asp
-  12. https://www.knowledgehut.com/blog/web-development/how-to-add-background-image-in-html
-  13. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption
-  14. https://www.w3schools.com/tags/att_video_controls.asp
-  15. https://www.geeksforgeeks.org/how-to-insert-video-in-web-page-and-play-it-using-html/
-  16. https://www.digitalocean.com/community/tutorials/css-css-grid-layout-fr-unit
-  17. https://css-tricks.com/almanac/properties/g/grid-template-columns/
-  18. https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-  19. https://www.w3schools.com/cssref/tryit.php?filename=trycss3_order
-  20. https://developer.mozilla.org/en-US/docs/Web/CSS/order
-  21. https://css-tricks.com/introduction-fr-css-unit/
-  22. https://www.digitalocean.com/community/tutorials/css-css-grid-layout-fr-unit
-  23. https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns
-  24. https://codepen.io/washaweb/pen/KVRxRW
-  25. https://codepen.io/pankajthakur/pen/yVrXxj?editors=1010
-  26. https://www.w3schools.com/cssref/sel_hover.php
-  27. https://stackoverflow.com/questions/48693558/screen-reader-not-reading-h1-on-entering-the-screen
-  28. https://stackoverflow.com/questions/4861230/make-a-link-have-100-width
-  29. https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp
-  30. https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp
-  31. https://www.w3schools.com/jsref/event_onclick.asp
-  32. Een hoop snelle Google searches
 
 </details>
